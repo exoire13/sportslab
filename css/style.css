@@ -845,28 +845,74 @@ button {
     background: #0b0b0b;
 }
 
+/* ========================================
+   PRICING GRID
+======================================== */
+
 .pricing-grid {
-    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 35px;
 
-    margin: 60px auto 0;
+    width: 100%;
+    max-width: 950px;
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
 
-    gap: 20px;
+    flex-wrap: wrap;
 }
 
+
+/* ========================================
+   PRICING CARDS
+======================================== */
+
 .pricing-card {
-    position: relative;
+    width: 100%;
+    max-width: 400px;
 
-    padding: 40px 32px;
+    min-height: 430px;
 
-    background: linear-gradient(135deg, #1a1a1a 0%, #151515 100%);
+    padding: 45px 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    background: #151515;
 
     border: 1px solid #292929;
 
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #e53935;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .pricing-grid {
+        gap: 20px;
+    }
+
+    .pricing-card {
+        max-width: 100%;
+
+        min-height: 400px;
+
+        padding: 35px 25px;
+    }
+
 }
 
 .pricing-card:hover {
