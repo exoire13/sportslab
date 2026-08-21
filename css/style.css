@@ -3292,114 +3292,85 @@ button {
 }
 
 /* =========================================
-   MOBILE FLOATING BOOKING BUTTON
+   SPORTS LAB - MOBILE FLOATING BOOK BUTTON
    ========================================= */
 
 .mobile-book-btn {
-    display: none;
+    display: none !important;
 }
 
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
     .mobile-book-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
+        display: flex !important;
 
-        position: fixed;
+        position: fixed !important;
 
-        right: 18px;
-        bottom: 18px;
+        right: 18px !important;
+        bottom: 18px !important;
 
-        height: 54px;
-        padding: 0 18px;
+        width: 62px !important;
+        height: 62px !important;
 
-        background: #e53935;
-        color: #ffffff;
+        padding: 0 !important;
 
-        text-decoration: none;
+        background: #e53935 !important;
+        color: #ffffff !important;
 
-        border-radius: 30px;
+        border-radius: 50% !important;
 
-        font-family: 'Poppins', sans-serif;
-        font-size: 12px;
-        font-weight: 700;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-direction: column !important;
 
-        letter-spacing: 0.7px;
+        text-decoration: none !important;
+
+        font-family: 'Poppins', sans-serif !important;
+        font-size: 9px !important;
+        font-weight: 700 !important;
+
+        letter-spacing: .5px !important;
 
         box-shadow:
-            0 8px 25px rgba(0, 0, 0, 0.45);
+            0 6px 20px rgba(0, 0, 0, .45) !important;
 
-        z-index: 9999;
+        z-index: 99999 !important;
 
-        overflow: hidden;
+        border: 2px solid rgba(255,255,255,.15) !important;
 
         transition:
-            transform 0.2s ease,
-            box-shadow 0.2s ease;
+            transform .2s ease,
+            box-shadow .2s ease !important;
     }
 
 
-    /* Shine effect */
+    .mobile-book-btn .booking-icon {
+        display: block !important;
 
-    .mobile-book-btn::before {
-        content: "";
+        font-size: 23px !important;
 
-        position: absolute;
+        line-height: 23px !important;
 
-        top: 0;
-        left: -100%;
-
-        width: 60%;
-        height: 100%;
-
-        background: rgba(255,255,255,0.18);
-
-        transform: skewX(-25deg);
-
-        transition: left 0.5s ease;
+        margin-bottom: 2px !important;
     }
 
 
-    .mobile-book-btn:hover::before {
-        left: 140%;
-    }
-
-
-    /* Baseball icon */
-
-    .booking-icon {
-        font-size: 19px;
-
-        position: relative;
-
-        z-index: 2;
-    }
-
-
-    .booking-text {
-        position: relative;
-
-        z-index: 2;
-    }
-
-
-    /* Press animation */
-
-    .mobile-book-btn:active {
-        transform: scale(0.94);
+    .mobile-book-btn:hover {
+        transform: translateY(-4px) !important;
 
         box-shadow:
-            0 4px 12px rgba(0,0,0,0.35);
+            0 10px 25px rgba(0,0,0,.5) !important;
     }
 
 
-    /* Keep content from being covered */
+    .mobile-book-btn:active {
+        transform: scale(.9) !important;
+    }
+
 
     body {
-        padding-bottom: 85px;
+        padding-bottom: 30px;
     }
 
 }
