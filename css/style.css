@@ -3290,3 +3290,62 @@ button {
     }
 
 }
+
+/* =========================================
+   MOBILE STICKY BOOKING BUTTON
+   ========================================= */
+
+.mobile-book-btn {
+    display: none;
+}
+
+
+/* MOBILE ONLY */
+
+@media (max-width: 768px) {
+
+    .mobile-book-btn {
+        display: block;
+
+        position: fixed;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+
+        background: #e53935;
+        color: #ffffff;
+
+        text-align: center;
+        text-decoration: none;
+
+        padding: 15px 20px;
+
+        border-radius: 8px;
+
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+
+        letter-spacing: 0.5px;
+
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
+
+        z-index: 9999;
+
+        transition: 0.2s ease;
+    }
+
+
+    .mobile-book-btn:active {
+        transform: scale(0.97);
+    }
+
+
+    /* Prevent the button from covering
+       the bottom of your content */
+
+    body {
+        padding-bottom: 80px;
+    }
+
+}
