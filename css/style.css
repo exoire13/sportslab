@@ -3292,7 +3292,7 @@ button {
 }
 
 /* =========================================
-   MOBILE STICKY BOOKING BUTTON
+   MOBILE FLOATING BOOKING BUTTON
    ========================================= */
 
 .mobile-book-btn {
@@ -3300,52 +3300,106 @@ button {
 }
 
 
-/* MOBILE ONLY */
-
 @media (max-width: 768px) {
 
     .mobile-book-btn {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
 
         position: fixed;
-        bottom: 15px;
-        left: 15px;
-        right: 15px;
+
+        right: 18px;
+        bottom: 18px;
+
+        height: 54px;
+        padding: 0 18px;
 
         background: #e53935;
         color: #ffffff;
 
-        text-align: center;
         text-decoration: none;
 
-        padding: 15px 20px;
-
-        border-radius: 8px;
+        border-radius: 30px;
 
         font-family: 'Poppins', sans-serif;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 700;
 
-        letter-spacing: 0.5px;
+        letter-spacing: 0.7px;
 
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
+        box-shadow:
+            0 8px 25px rgba(0, 0, 0, 0.45);
 
         z-index: 9999;
 
-        transition: 0.2s ease;
+        overflow: hidden;
+
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
     }
 
+
+    /* Shine effect */
+
+    .mobile-book-btn::before {
+        content: "";
+
+        position: absolute;
+
+        top: 0;
+        left: -100%;
+
+        width: 60%;
+        height: 100%;
+
+        background: rgba(255,255,255,0.18);
+
+        transform: skewX(-25deg);
+
+        transition: left 0.5s ease;
+    }
+
+
+    .mobile-book-btn:hover::before {
+        left: 140%;
+    }
+
+
+    /* Baseball icon */
+
+    .booking-icon {
+        font-size: 19px;
+
+        position: relative;
+
+        z-index: 2;
+    }
+
+
+    .booking-text {
+        position: relative;
+
+        z-index: 2;
+    }
+
+
+    /* Press animation */
 
     .mobile-book-btn:active {
-        transform: scale(0.97);
+        transform: scale(0.94);
+
+        box-shadow:
+            0 4px 12px rgba(0,0,0,0.35);
     }
 
 
-    /* Prevent the button from covering
-       the bottom of your content */
+    /* Keep content from being covered */
 
     body {
-        padding-bottom: 80px;
+        padding-bottom: 85px;
     }
 
 }
