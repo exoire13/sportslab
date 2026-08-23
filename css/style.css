@@ -3291,3 +3291,353 @@ button {
 
 }
 
+/* =========================================
+   SPORTS LAB — COMING SOON PAGE
+   ========================================= */
+
+.coming-background {
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(229, 57, 53, 0.15),
+            transparent 55%
+        );
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+.coming-page {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    padding: 40px 20px;
+
+    background: #0d0d0d;
+
+    overflow: hidden;
+}
+
+
+.coming-content {
+    width: 100%;
+
+    max-width: 750px;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* LOGO */
+
+.coming-logo {
+    display: inline-block;
+
+    color: #ffffff;
+
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-decoration: none;
+
+    margin-bottom: 45px;
+}
+
+
+.coming-logo span {
+    color: #e53935;
+}
+
+
+/* BASEBALL */
+
+.coming-icon {
+    font-size: 52px;
+
+    margin-bottom: 20px;
+
+    animation:
+        comingFloat 3s ease-in-out infinite;
+}
+
+
+@keyframes comingFloat {
+
+    0%,
+    100% {
+        transform: translateY(0)
+                   rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-10px)
+                   rotate(8deg);
+    }
+
+}
+
+
+/* LABEL */
+
+.coming-label {
+    color: #e53935;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+
+/* HEADING */
+
+.coming-content h1 {
+    margin: 0 0 28px;
+
+    font-family: 'Oswald', sans-serif;
+
+    font-size:
+        clamp(
+            65px,
+            12vw,
+            125px
+        );
+
+    font-weight: 700;
+
+    line-height: 0.88;
+
+    letter-spacing: -2px;
+
+    color: #ffffff;
+}
+
+
+.coming-content h1 span {
+    color: #e53935;
+}
+
+
+/* DESCRIPTION */
+
+.coming-description {
+    max-width: 570px;
+
+    margin: 0 auto;
+
+    color: #999999;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* BUTTONS */
+
+.coming-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    margin-top: 35px;
+}
+
+
+.coming-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 48px;
+
+    padding: 0 22px;
+
+    border-radius: 5px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* RED BUTTON */
+
+.coming-btn.primary {
+    background: #e53935;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 8px 25px
+        rgba(229, 57, 53, 0.2);
+}
+
+
+.coming-btn.primary:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(229, 57, 53, 0.35);
+}
+
+
+/* DARK BUTTON */
+
+.coming-btn.secondary {
+    background: #1b1b1b;
+
+    color: #ffffff;
+
+    border: 1px solid #292929;
+}
+
+
+.coming-btn.secondary:hover {
+    transform: translateY(-3px);
+
+    background: #222222;
+}
+
+
+/* LOCATION */
+
+.coming-location {
+    margin-top: 45px;
+
+    color: #666666;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 0.3px;
+}
+
+
+.coming-location span {
+    margin-right: 5px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .coming-page {
+        padding:
+            35px
+            18px;
+    }
+
+
+    .coming-logo {
+        font-size: 25px;
+
+        margin-bottom: 38px;
+    }
+
+
+    .coming-icon {
+        font-size: 44px;
+    }
+
+
+    .coming-label {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .coming-content h1 {
+        font-size:
+            clamp(
+                58px,
+                18vw,
+                90px
+            );
+
+        letter-spacing: -1px;
+    }
+
+
+    .coming-description {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    .coming-buttons {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+
+    .coming-btn {
+        width: 100%;
+
+        max-width: 300px;
+    }
+
+
+    .coming-location {
+        margin-top: 35px;
+
+        font-size: 10px;
+    }
+
+}
