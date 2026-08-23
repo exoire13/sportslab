@@ -3303,7 +3303,7 @@ button {
     background:
         radial-gradient(
             circle at center,
-            rgba(229, 57, 53, 0.15),
+            rgba(212, 175, 55, 0.15),
             transparent 55%
         );
 
@@ -3367,7 +3367,7 @@ button {
 
 
 .coming-logo span {
-    color: #e53935;
+    color: #D4AF37;
 }
 
 
@@ -3402,7 +3402,7 @@ button {
 /* LABEL */
 
 .coming-label {
-    color: #e53935;
+    color: #D4AF37;
 
     font-family: 'Poppins', sans-serif;
 
@@ -3441,7 +3441,7 @@ button {
 
 
 .coming-content h1 span {
-    color: #e53935;
+    color: #D4AF37;
 }
 
 
@@ -3514,13 +3514,13 @@ button {
 /* RED BUTTON */
 
 .coming-btn.primary {
-    background: #e53935;
+    background: #D4AF37;
 
     color: #ffffff;
 
     box-shadow:
         0 8px 25px
-        rgba(229, 57, 53, 0.2);
+        #D4AF37;
 }
 
 
@@ -3529,7 +3529,7 @@ button {
 
     box-shadow:
         0 12px 30px
-        rgba(229, 57, 53, 0.35);
+        #D4AF37;
 }
 
 
