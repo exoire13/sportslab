@@ -268,7 +268,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 formNote.textContent =
-                    "Something went wrong. Please try again or call us at (520) 683-5905.";
+                    "Something went wrong. Please try again or call us at (520) 701-2963.";
 
                 formNote.style.color =
                     "#e53935";
