@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Cage | SPORTS LAB</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    .cage-section{padding:80px 0 95px;overflow:hidden}
+    .cage-inner{max-width:1250px;margin:auto;padding:0 20px}
+    .cage-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:28px}
+    .cage-controls{display:flex;gap:10px}
+    .cage-arrow{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.07);color:#fff;cursor:pointer}
+    .cage-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 2px 20px;scrollbar-width:none}
+    .cage-track::-webkit-scrollbar{display:none}
+    .cage-card{flex:0 0 min(82vw,390px);scroll-snap-align:start;background:#111;border:1px solid rgba(255,255,255,.1);border-radius:22px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.24)}
+    .cage-img{position:relative;aspect-ratio:16/10;background:#1a1a1a;overflow:hidden}
+    .cage-img img{width:100%;height:100%;object-fit:cover;display:block}
+    .cage-tag{position:absolute;top:16px;left:16px;background:rgba(0,0,0,.72);padding:8px 12px;border-radius:999px;color:#fff;font:600 .82rem Oswald,sans-serif;letter-spacing:.08em}
+    .cage-body{padding:24px}
+    .cage-body h3{font-family:Oswald,sans-serif;font-size:1.75rem;margin:0 0 10px}
+    .cage-body p{opacity:.78;line-height:1.7;margin:0 0 22px}
+    .cage-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+    .cage-pill{font-size:.8rem;padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.08)}
+    .cage-book{width:100%;display:flex;align-items:center;justify-content:center;gap:9px}
+    .scroll-hint{text-align:center;opacity:.56;font-size:.86rem;margin-top:6px}
+    @media(max-width:700px){.cage-controls{display:none}.cage-card{flex-basis:86vw}.cage-section{padding-top:60px}}
+  </style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="nav-container">
+    <a href="../" class="logo">SPORTS <span>LAB</span></a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="../">Home</a>
+      <a href="../book/">Book a Cage</a>
+      <a href="../pricing/">Pricing</a>
+      <a href="../lessons/">Lessons</a>
+      <a href="../gallery/">Gallery</a>
+      <a href="../contact/">Contact</a>
+    </nav>
+
+    <a href="https://book.runswiftapp.com/facilities/sports-lab/rentals" class="nav-button">BOOK NOW</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="page-hero-content">
+    <p class="hero-small">PICK YOUR SPACE. GET YOUR REPS.</p>
+    <h1>BOOK A CAGE</h1>
+    <p>Scroll through our cages and choose the space that works best for your session.</p>
+  </div>
+</section>
+
+<section class="cage-section">
+  <div class="cage-inner">
+
+    <div class="cage-head">
+      <div>
+        <p class="section-label">AVAILABLE CAGES</p>
+        <h2>CHOOSE YOUR CAGE</h2>
+        <p>Swipe or use the arrows to browse each cage.</p>
+      </div>
+
+      <div class="cage-controls">
+        <button class="cage-arrow" id="cagePrev" aria-label="Previous cage"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="cage-arrow" id="cageNext" aria-label="Next cage"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <div class="cage-track" id="cageTrack">
+
+      <article class="cage-card">
+        <div class="cage-img">
+          <img src="../images/cage-1.jpg" alt="Sports Lab Cage 1">
+          <span class="cage-tag">CAGE 01</span>
+        </div>
+        <div class="cage-body">
+          <h3>CAGE 1</h3>
+          <p>A versatile training cage for hitting, pitching, tee work, and individual practice.</p>
+          <div class="cage-pills">
+            <span class="cage-pill">Baseball</span>
+            <span class="cage-pill">Softball</span>
+            <span class="cage-pill">Pitching Machine</span>
+          </div>
+          <a href="https://book.runswiftapp.com/facilities/sports-lab/rentals" class="membership-button cage-book">BOOK <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="cage-card">
+        <div class="cage-img">
+          <img src="../images/cage-2.jpg" alt="Sports Lab Cage 2">
+          <span class="cage-tag">CAGE 02</span>
+        </div>
+        <div class="cage-body">
+          <h3>CAGE 2</h3>
+          <p>Great for focused hitting sessions, live toss, mechanics work, and regular training.</p>
+          <div class="cage-pills">
+            <span class="cage-pill">Baseball</span>
+            <span class="cage-pill">Softball</span>
+            <span class="cage-pill">Hitting</span>
+          </div>
+          <a href="https://book.runswiftapp.com/facilities/sports-lab/rentals" class="membership-button cage-book">BOOK <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="cage-card">
+        <div class="cage-img">
+          <img src="../images/cage-3.jpg" alt="Sports Lab Cage 3">
+          <span class="cage-tag">CAGE 03</span>
+        </div>
+        <div class="cage-body">
+          <h3>CAGE 3</h3>
+          <p>A flexible space for lessons, pitching work, coach-led sessions, and extra reps.</p>
+          <div class="cage-pills">
+            <span class="cage-pill">Lessons</span>
+            <span class="cage-pill">Pitching</span>
+            <span class="cage-pill">Training</span>
+          </div>
+          <a href="https://book.runswiftapp.com/facilities/sports-lab/rentals" class="membership-button cage-book">BOOK <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="cage-card">
+        <div class="cage-img">
+          <img src="../images/cage-4.jpg" alt="Sports Lab Cage 4">
+          <span class="cage-tag">CAGE 04</span>
+        </div>
+        <div class="cage-body">
+          <h3>CAGE 4</h3>
+          <p>Ideal for longer sessions, team reps, skill development, and coach-led practice.</p>
+          <div class="cage-pills">
+            <span class="cage-pill">Team Training</span>
+            <span class="cage-pill">Baseball</span>
+            <span class="cage-pill">Softball</span>
+          </div>
+          <a href="https://book.runswiftapp.com/facilities/sports-lab/rentals" class="membership-button cage-book">BOOK <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="scroll-hint">Swipe or scroll to see more cages</p>
+  </div>
+</section>
+
+<section class="pricing-cta">
+  <div>
+    <p class="section-label">NEED HELP CHOOSING?</p>
+    <h2>WE'LL HELP YOU FIND THE RIGHT CAGE.</h2>
+    <p>Contact Sports Lab and we can help you pick the best setup for your session.</p>
+    <a href="../contact/" class="btn btn-primary">CONTACT US</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <a href="../" class="logo">SPORTS <span>LAB</span></a>
+      <p>Train hard. Hit harder.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/sportslab_az/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/1HDGzncBon/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>QUICK LINKS</h4>
+      <a href="../">Home</a>
+      <a href="../book/">Book a Cage</a>
+      <a href="../pricing/">Pricing</a>
+      <a href="../lessons/">Lessons</a>
+      <a href="../gallery/">Gallery</a>
+      <a href="../contact/">Contact</a>
+    </div>
+
+    <div class="footer-contact">
+      <h4>FIND US</h4>
+      <a href="https://www.google.com/maps?q=1375+East+Florence+Boulevard,+Casa+Grande,+AZ+85122" target="_blank" rel="noopener noreferrer">
+        📍 1375 E Florence Blvd<br>&nbsp;&nbsp;&nbsp;&nbsp;Casa Grande, AZ 85122
+      </a>
+      <p>📞 <a href="tel:5207012963">(520) 701-2963</a></p>
+      <a href="mailto:joe@sportslabaz.com">✉️ joe@sportslabaz.com</a>
+      <a href="mailto:brian@sportslabaz.com">✉️ brian@sportslabaz.com</a>
+    </div>
+
+    <div class="footer-book">
+      <h4>READY TO TRAIN?</h4>
+      <p>Reserve your cage and get to work.</p>
+      <a href="https://book.runswiftapp.com/facilities/sports-lab/rentals" class="footer-book-button" target="_blank" rel="noopener noreferrer">BOOK A CAGE →</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Sports Lab. All rights reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="../">Home</a><span>•</span>
+      <a href="../contact/">Contact</a><span>•</span>
+      <a href="../contact/">Team Contracts / Memberships — Contact Us</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+  const track = document.getElementById("cageTrack");
+  const prev = document.getElementById("cagePrev");
+  const next = document.getElementById("cageNext");
+
+  function amount() {
+    const card = track.querySelector(".cage-card");
+    return card ? card.getBoundingClientRect().width + 24 : 390;
+  }
+
+  prev.addEventListener("click", () => track.scrollBy({ left: -amount(), behavior: "smooth" }));
+  next.addEventListener("click", () => track.scrollBy({ left: amount(), behavior: "smooth" }));
+</script>
+
+</body>
+</html>

@@ -3641,3 +3641,541 @@ button {
     }
 
 }
+
+/* =========================================================
+   SPORTS LAB — BOOK A CAGE PAGE
+   Load this AFTER ../css/style.css
+   ========================================================= */
+
+
+/* -------------------------
+   PAGE HERO
+-------------------------- */
+
+.page-hero {
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 150px 24px 80px;
+    overflow: hidden;
+}
+
+.page-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.28) 0%,
+            rgba(0, 0, 0, 0.72) 100%
+        );
+    pointer-events: none;
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.page-hero .hero-small {
+    margin: 0 0 12px;
+    font-family: "Oswald", sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.page-hero h1 {
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(3.4rem, 8vw, 6.4rem);
+    font-weight: 700;
+    line-height: 0.95;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+.page-hero-content > p:last-child {
+    max-width: 680px;
+    margin: 22px auto 0;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    opacity: 0.78;
+}
+
+
+/* -------------------------
+   CAGE SECTION
+-------------------------- */
+
+.cage-section {
+    position: relative;
+    padding: 90px 0 105px;
+    overflow: hidden;
+}
+
+.cage-inner {
+    width: min(1250px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* -------------------------
+   SECTION HEADER
+-------------------------- */
+
+.cage-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 34px;
+}
+
+.cage-head > div:first-child {
+    max-width: 700px;
+}
+
+.cage-head .section-label {
+    margin: 0 0 8px;
+    font-family: "Oswald", sans-serif;
+    font-size: 0.86rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.cage-head h2 {
+    margin: 0 0 10px;
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(2.25rem, 5vw, 3.7rem);
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.cage-head p:last-child {
+    margin: 0;
+    max-width: 650px;
+    line-height: 1.7;
+    opacity: 0.72;
+}
+
+
+/* -------------------------
+   CAROUSEL CONTROLS
+-------------------------- */
+
+.cage-controls {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    flex-shrink: 0;
+}
+
+.cage-arrow {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.06);
+    color: inherit;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.cage-arrow:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.26);
+}
+
+.cage-arrow:active {
+    transform: translateY(0) scale(0.96);
+}
+
+.cage-arrow i {
+    font-size: 0.95rem;
+}
+
+
+/* -------------------------
+   CAROUSEL TRACK
+-------------------------- */
+
+.cage-track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-inline: contain;
+
+    padding: 4px 3px 24px;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.cage-track::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* -------------------------
+   CAGE CARD
+-------------------------- */
+
+.cage-card {
+    position: relative;
+    flex: 0 0 380px;
+    scroll-snap-align: start;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.035),
+            rgba(255, 255, 255, 0.015)
+        ),
+        #111;
+
+    box-shadow:
+        0 18px 50px rgba(0, 0, 0, 0.24);
+
+    transition:
+        transform 0.28s ease,
+        border-color 0.28s ease,
+        box-shadow 0.28s ease;
+}
+
+.cage-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow:
+        0 26px 65px rgba(0, 0, 0, 0.32);
+}
+
+
+/* -------------------------
+   CAGE IMAGE
+-------------------------- */
+
+.cage-img {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #1a1a1a;
+}
+
+.cage-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            180deg,
+            transparent 40%,
+            rgba(0, 0, 0, 0.48) 100%
+        );
+    pointer-events: none;
+}
+
+.cage-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+
+    transition:
+        transform 0.45s ease,
+        filter 0.45s ease;
+}
+
+.cage-card:hover .cage-img img {
+    transform: scale(1.055);
+}
+
+
+/* -------------------------
+   CAGE NUMBER BADGE
+-------------------------- */
+
+.cage-tag {
+    position: absolute;
+    z-index: 2;
+    top: 16px;
+    left: 16px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 13px;
+
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    background: rgba(0, 0, 0, 0.68);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    font-family: "Oswald", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+}
+
+
+/* -------------------------
+   CARD BODY
+-------------------------- */
+
+.cage-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    padding: 25px;
+}
+
+.cage-body h3 {
+    margin: 0 0 10px;
+
+    font-family: "Oswald", sans-serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.cage-body > p {
+    margin: 0 0 20px;
+    line-height: 1.72;
+    opacity: 0.74;
+}
+
+
+/* -------------------------
+   FEATURE PILLS
+-------------------------- */
+
+.cage-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-bottom: 23px;
+}
+
+.cage-pill {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 11px;
+
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: rgba(255, 255, 255, 0.055);
+
+    font-size: 0.78rem;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+
+/* -------------------------
+   BOOK BUTTON
+-------------------------- */
+
+.cage-book {
+    margin-top: auto;
+
+    width: 100%;
+    min-height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+.cage-book:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.06);
+}
+
+.cage-book i {
+    transition: transform 0.2s ease;
+}
+
+.cage-book:hover i {
+    transform: translateX(4px);
+}
+
+
+/* -------------------------
+   SCROLL HINT
+-------------------------- */
+
+.scroll-hint {
+    margin: 8px 0 0;
+
+    text-align: center;
+    font-size: 0.84rem;
+    letter-spacing: 0.02em;
+
+    opacity: 0.48;
+}
+
+
+/* -------------------------
+   CTA SECTION
+-------------------------- */
+
+.pricing-cta {
+    text-align: center;
+}
+
+.pricing-cta > div {
+    width: min(900px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.pricing-cta h2 {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+}
+
+
+/* -------------------------
+   TABLET
+-------------------------- */
+
+@media (max-width: 900px) {
+
+    .cage-card {
+        flex-basis: 350px;
+    }
+
+}
+
+
+/* -------------------------
+   MOBILE
+-------------------------- */
+
+@media (max-width: 700px) {
+
+    .page-hero {
+        min-height: 360px;
+        padding: 125px 20px 65px;
+    }
+
+    .page-hero h1 {
+        font-size: clamp(3rem, 16vw, 4.6rem);
+    }
+
+    .page-hero-content > p:last-child {
+        font-size: 0.96rem;
+    }
+
+    .cage-section {
+        padding: 65px 0 80px;
+    }
+
+    .cage-inner {
+        width: min(100%, calc(100% - 28px));
+    }
+
+    .cage-head {
+        align-items: flex-start;
+        margin-bottom: 25px;
+    }
+
+    .cage-controls {
+        display: none;
+    }
+
+    .cage-track {
+        gap: 16px;
+        margin-right: -14px;
+        padding-right: 30px;
+    }
+
+    .cage-card {
+        flex-basis: 86vw;
+        max-width: 365px;
+        border-radius: 20px;
+    }
+
+    .cage-body {
+        padding: 21px;
+    }
+
+    .cage-body h3 {
+        font-size: 1.7rem;
+    }
+
+    .scroll-hint::before {
+        content: "← ";
+    }
+
+    .scroll-hint::after {
+        content: " →";
+    }
+
+}
+
+
+/* -------------------------
+   SMALL PHONES
+-------------------------- */
+
+@media (max-width: 430px) {
+
+    .cage-card {
+        flex-basis: 88vw;
+    }
+
+    .cage-pill {
+        font-size: 0.74rem;
+    }
+
+    .cage-body > p {
+        font-size: 0.93rem;
+    }
+
+}
