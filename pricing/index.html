@@ -247,7 +247,16 @@
 
 
 
-            <!-- PRO -->
+        <div class="membership-grid" style="
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px;
+            max-width: 950px;
+            margin: 0 auto;
+            align-items: stretch;
+        ">
+
+            <!-- STANDARD MEMBERSHIP -->
             <div class="membership-card membership-featured">
 
                 <div class="membership-badge">
@@ -286,7 +295,49 @@
             </div>
 
 
+            <!-- TEAM CONTRACTS -->
+            <div class="membership-card">
+
+                <div class="membership-icon">
+                    🏆
+                </div>
+
+                <h3>
+                    TEAM CONTRACTS
+                </h3>
+
+                <div class="membership-price">
+                    CUSTOM<span> pricing</span>
+                </div>
+
+                <p>
+                    Flexible training packages for teams, coaches, and organizations.
+                </p>
+
+                <ul>
+
+                    <li>✓ Team cage rental packages</li>
+                    <li>✓ Recurring training times</li>
+                    <li>✓ Flexible scheduling options</li>
+                    <li>✓ Custom rates based on team needs</li>
+
+                </ul>
+
+                <a href="../contact/" class="membership-button">
+                    CONTACT US
+                </a>
+
+            </div>
+
         </div>
+
+        <style>
+            @media (max-width: 760px) {
+                .membership-grid {
+                    grid-template-columns: 1fr !important;
+                }
+            }
+        </style>
 
     </section>
 
