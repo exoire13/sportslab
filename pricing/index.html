@@ -1,3 +1,31 @@
+Pasted code(2).html
+File
+in this can u add a team rental one next to cage 6. team cages 3 and team cages 4. 3 just rents out 3,4,5. and team cages 4 rents out 3,4,5,6
+
+Done — I added the two Team Rental options directly after Cage 6, matching the existing cage-card layout.
+
+Team Cages 3 → rents Cages 3, 4, and 5
+Team Cages 4 → rents Cages 3, 4, 5, and 6
+Both use the same current booking link
+Updated the bottom hint to mention team rentals too
+
+Download the updated HTML 
+
+book-with-team-rentals.html
+HTML
+Pasted code(3).html
+File
+for this one next to the 60 mins one add the team rentals. put price at 200-255 for 2 hours. also change 60 mins to 40
+
+Done. I updated the 60-minute option from $45 to $40 and added a Team Rentals card next to it. The original pricing section is here for reference.
+
+The Team Rentals card now shows $200–$255 for 2 hours, with:
+
+Team Cages 3: Cages 3, 4, 5
+Team Cages 4: Cages 3, 4, 5, 6
+
+Download the updated pricing HTML 
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -194,7 +222,7 @@
                     </h3>
 
                     <div class="price">
-                        <span>$</span>45
+                        <span>$</span>40
                     </div>
 
                     <p class="price-description">
@@ -221,7 +249,47 @@
 
 
            
-        </div>
+        
+            <!-- TEAM RENTALS -->
+            <div class="pricing-card">
+
+                <div class="pricing-card-top">
+
+                    <p class="pricing-label">
+                        TEAM TRAINING
+                    </p>
+
+                    <h3>
+                        TEAM RENTALS
+                    </h3>
+
+                    <div class="price">
+                        <span>$</span>200–255
+                    </div>
+
+                    <p class="price-description">
+                        Two hours of dedicated cage space for team practices and group training.
+                    </p>
+
+                </div>
+
+                <ul class="pricing-features">
+
+                    <li>✓ 2 hours of team cage time</li>
+                    <li>✓ Team Cages 3: Cages 3, 4 &amp; 5</li>
+                    <li>✓ Team Cages 4: Cages 3, 4, 5 &amp; 6</li>
+                    <li>✓ Baseball or softball</li>
+                    <li>✓ Great for full team practices</li>
+
+                </ul>
+
+                <a href="../booking/" class="pricing-button">
+                    BOOK TEAM RENTAL
+                </a>
+
+            </div>
+
+</div>
 
     </section>
 
@@ -611,3 +679,5 @@
 
 </body>
 </html>
+pricing-with-team-rentals.html
+HTML
