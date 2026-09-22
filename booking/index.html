@@ -16,11 +16,23 @@
     .cage-section{padding:80px 0 95px;overflow:hidden}
     .cage-inner{max-width:1250px;margin:auto;padding:0 20px}
     .cage-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:28px}
-    .cage-controls{display:flex;gap:10px}
-    .cage-arrow{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.07);color:#fff;cursor:pointer}
-    .cage-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 2px 20px;scrollbar-width:none}
-    .cage-track::-webkit-scrollbar{display:none}
-    .cage-card{flex:0 0 min(82vw,390px);scroll-snap-align:start;background:#111;border:1px solid rgba(255,255,255,.1);border-radius:22px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.24)}
+    .cage-controls{display:none}
+    .cage-track{
+      display:grid;
+      grid-template-columns:repeat(6,minmax(0,1fr));
+      gap:24px;
+      padding:4px 2px 20px;
+    }
+    .cage-card{
+      grid-column:span 2;
+      min-width:0;
+      background:#111;
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:0 18px 40px rgba(0,0,0,.24)
+    }
+    .cage-card:nth-child(n+7){grid-column:span 3}
     .cage-img{position:relative;aspect-ratio:16/10;background:#1a1a1a;overflow:hidden}
     .cage-img img{width:100%;height:100%;object-fit:cover;display:block}
     .cage-tag{position:absolute;top:16px;left:16px;background:rgba(0,0,0,.72);padding:8px 12px;border-radius:999px;color:#fff;font:600 .82rem Oswald,sans-serif;letter-spacing:.08em}
@@ -30,8 +42,20 @@
     .cage-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
     .cage-pill{font-size:.8rem;padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.08)}
     .cage-book{width:100%;display:flex;align-items:center;justify-content:center;gap:9px}
-    .scroll-hint{text-align:center;opacity:.56;font-size:.86rem;margin-top:6px}
-    @media(max-width:700px){.cage-controls{display:none}.cage-card{flex-basis:86vw}.cage-section{padding-top:60px}}
+    .scroll-hint{display:none}
+
+    @media(max-width:1000px){
+      .cage-track{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .cage-card,
+      .cage-card:nth-child(n+7){grid-column:span 1}
+    }
+
+    @media(max-width:700px){
+      .cage-section{padding-top:60px}
+      .cage-track{grid-template-columns:1fr}
+      .cage-card,
+      .cage-card:nth-child(n+7){grid-column:span 1}
+    }
   </style>
 </head>
 
@@ -73,13 +97,9 @@
       <div>
         <p class="section-label">AVAILABLE CAGES</p>
         <h2>CHOOSE YOUR CAGE</h2>
-        <p>Swipe or use the arrows to browse each cage.</p>
+        <p>Choose from our individual cages or team rental setups.</p>
       </div>
 
-      <div class="cage-controls">
-        <button class="cage-arrow" id="cagePrev" aria-label="Previous cage"><i class="fa-solid fa-arrow-left"></i></button>
-        <button class="cage-arrow" id="cageNext" aria-label="Next cage"><i class="fa-solid fa-arrow-right"></i></button>
-      </div>
     </div>
 
     <div class="cage-track" id="cageTrack">
@@ -223,7 +243,6 @@
 
     </div>
 
-    <p class="scroll-hint">Swipe or scroll to see more cages & team rentals</p>
   </div>
 </section>
 
@@ -284,19 +303,6 @@
 </footer>
 
 <script src="../js/main.js"></script>
-<script>
-  const track = document.getElementById("cageTrack");
-  const prev = document.getElementById("cagePrev");
-  const next = document.getElementById("cageNext");
-
-  function amount() {
-    const card = track.querySelector(".cage-card");
-    return card ? card.getBoundingClientRect().width + 24 : 390;
-  }
-
-  prev.addEventListener("click", () => track.scrollBy({ left: -amount(), behavior: "smooth" }));
-  next.addEventListener("click", () => track.scrollBy({ left: amount(), behavior: "smooth" }));
-</script>
 
 </body>
 </html>
