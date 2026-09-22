@@ -59,6 +59,32 @@
     .footer-hours-list strong {
         font-weight: 400;
     }
+
+    /* ABOUT INSTAGRAM REEL */
+    .about-reel {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .about-reel .instagram-media {
+        width: 100% !important;
+        max-width: 430px !important;
+        min-width: 0 !important;
+        margin: 0 auto !important;
+    }
+
+    @media (max-width: 900px) {
+        .about-reel {
+            margin-bottom: 30px;
+        }
+
+        .about-reel .instagram-media {
+            max-width: 540px !important;
+        }
+    }
+
 </style>
 
 </head>
@@ -201,8 +227,19 @@
 
             <div class="section-container">
 
- <div class="about-image">
-    <img src="images/team1.jpeg" alt="Sports Lab Team" class="about-photo">
+ <div class="about-reel">
+    <blockquote
+        class="instagram-media"
+        data-instgrm-captioned
+        data-instgrm-permalink="https://www.instagram.com/reel/Ddj-R8BSYJc/?utm_source=ig_embed&amp;utm_campaign=loading"
+        data-instgrm-version="14">
+        <a
+            href="https://www.instagram.com/reel/Ddj-R8BSYJc/?utm_source=ig_embed&amp;utm_campaign=loading"
+            target="_blank"
+            rel="noopener noreferrer">
+            View this post on Instagram
+        </a>
+    </blockquote>
 </div>
 
                 <div class="about-content">
@@ -551,6 +588,7 @@
 
 </footer>
 
+    <script async src="https://www.instagram.com/embed.js"></script>
     <script src="js/main.js"></script>
 
 </body>
