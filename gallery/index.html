@@ -38,6 +38,140 @@
         rel="stylesheet"
     >
 
+
+<style>
+    .gallery-item img {
+        cursor: zoom-in;
+    }
+
+    .gallery-lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.94);
+        padding: 24px;
+        overflow: hidden;
+    }
+
+    .gallery-lightbox.active {
+        display: flex;
+    }
+
+    .gallery-lightbox-stage {
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .gallery-lightbox-image {
+        max-width: 92vw;
+        max-height: 88vh;
+        object-fit: contain;
+        transform: scale(1);
+        transform-origin: center center;
+        transition: transform 0.18s ease;
+        cursor: zoom-in;
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+
+    .gallery-lightbox-image.zoomed {
+        cursor: zoom-out;
+    }
+
+    .gallery-lightbox-close,
+    .gallery-lightbox-nav,
+    .gallery-lightbox-zoom {
+        position: fixed;
+        z-index: 100001;
+        width: 46px;
+        height: 46px;
+        border: 1px solid rgba(255,255,255,.18);
+        border-radius: 50%;
+        background: rgba(20,20,20,.78);
+        color: #fff;
+        font-size: 1.05rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(8px);
+    }
+
+    .gallery-lightbox-close {
+        top: 22px;
+        right: 22px;
+    }
+
+    .gallery-lightbox-prev {
+        left: 22px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .gallery-lightbox-next {
+        right: 22px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .gallery-lightbox-controls {
+        position: fixed;
+        z-index: 100001;
+        left: 50%;
+        bottom: 22px;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        padding: 8px;
+        border-radius: 999px;
+        background: rgba(15,15,15,.72);
+        border: 1px solid rgba(255,255,255,.12);
+        backdrop-filter: blur(8px);
+    }
+
+    .gallery-lightbox-controls .gallery-lightbox-zoom {
+        position: static;
+    }
+
+    @media (max-width: 700px) {
+        .gallery-lightbox {
+            padding: 12px;
+        }
+
+        .gallery-lightbox-image {
+            max-width: 96vw;
+            max-height: 82vh;
+        }
+
+        .gallery-lightbox-close {
+            top: 12px;
+            right: 12px;
+        }
+
+        .gallery-lightbox-prev {
+            left: 10px;
+        }
+
+        .gallery-lightbox-next {
+            right: 10px;
+        }
+
+        .gallery-lightbox-close,
+        .gallery-lightbox-nav,
+        .gallery-lightbox-zoom {
+            width: 42px;
+            height: 42px;
+        }
+    }
+</style>
+
 </head>
 
 <script src="js/main.js"></script>
@@ -265,7 +399,7 @@
                 <div class="gallery-overlay">
 
                     <span>
-                        Facility
+                        FACILITY
                     </span>
 
                 </div>
@@ -452,6 +586,39 @@
 
 
 
+
+    <!-- GALLERY LIGHTBOX -->
+    <div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true">
+        <button class="gallery-lightbox-close" id="galleryLightboxClose" aria-label="Close image viewer">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <button class="gallery-lightbox-nav gallery-lightbox-prev" id="galleryLightboxPrev" aria-label="Previous image">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="gallery-lightbox-stage" id="galleryLightboxStage">
+            <img class="gallery-lightbox-image" id="galleryLightboxImage" src="" alt="">
+        </div>
+
+        <button class="gallery-lightbox-nav gallery-lightbox-next" id="galleryLightboxNext" aria-label="Next image">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <div class="gallery-lightbox-controls">
+            <button class="gallery-lightbox-zoom" id="galleryZoomOut" aria-label="Zoom out">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+            <button class="gallery-lightbox-zoom" id="galleryZoomReset" aria-label="Reset zoom">
+                <i class="fa-solid fa-arrows-to-circle"></i>
+            </button>
+            <button class="gallery-lightbox-zoom" id="galleryZoomIn" aria-label="Zoom in">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+    </div>
+
+
     <!-- FOOTER -->
 <footer class="footer">
 
@@ -612,6 +779,118 @@
 
 
     <script src="../js/main.js"></script>
+
+
+<script>
+(function () {
+    const galleryImages = Array.from(document.querySelectorAll(".gallery-grid .gallery-item img"));
+    const lightbox = document.getElementById("galleryLightbox");
+    const lightboxImage = document.getElementById("galleryLightboxImage");
+    const stage = document.getElementById("galleryLightboxStage");
+    const closeButton = document.getElementById("galleryLightboxClose");
+    const prevButton = document.getElementById("galleryLightboxPrev");
+    const nextButton = document.getElementById("galleryLightboxNext");
+    const zoomInButton = document.getElementById("galleryZoomIn");
+    const zoomOutButton = document.getElementById("galleryZoomOut");
+    const zoomResetButton = document.getElementById("galleryZoomReset");
+
+    let currentIndex = 0;
+    let zoom = 1;
+
+    function applyZoom() {
+        lightboxImage.style.transform = `scale(${zoom})`;
+        lightboxImage.classList.toggle("zoomed", zoom > 1);
+        lightboxImage.style.cursor = zoom > 1 ? "zoom-out" : "zoom-in";
+    }
+
+    function resetZoom() {
+        zoom = 1;
+        applyZoom();
+        stage.scrollTop = 0;
+        stage.scrollLeft = 0;
+    }
+
+    function showImage(index) {
+        currentIndex = (index + galleryImages.length) % galleryImages.length;
+        const source = galleryImages[currentIndex];
+        lightboxImage.src = source.src;
+        lightboxImage.alt = source.alt || "Gallery image";
+        resetZoom();
+    }
+
+    function openLightbox(index) {
+        showImage(index);
+        lightbox.classList.add("active");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove("active");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+        resetZoom();
+    }
+
+    function zoomIn() {
+        zoom = Math.min(zoom + 0.5, 4);
+        applyZoom();
+    }
+
+    function zoomOut() {
+        zoom = Math.max(zoom - 0.5, 1);
+        applyZoom();
+    }
+
+    galleryImages.forEach((img, index) => {
+        img.addEventListener("click", () => openLightbox(index));
+    });
+
+    closeButton.addEventListener("click", closeLightbox);
+    prevButton.addEventListener("click", () => showImage(currentIndex - 1));
+    nextButton.addEventListener("click", () => showImage(currentIndex + 1));
+    zoomInButton.addEventListener("click", zoomIn);
+    zoomOutButton.addEventListener("click", zoomOut);
+    zoomResetButton.addEventListener("click", resetZoom);
+
+    lightboxImage.addEventListener("click", () => {
+        if (zoom === 1) {
+            zoom = 2;
+        } else {
+            zoom = 1;
+        }
+        applyZoom();
+    });
+
+    lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox || event.target === stage) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (!lightbox.classList.contains("active")) return;
+
+        if (event.key === "Escape") closeLightbox();
+        if (event.key === "ArrowLeft") showImage(currentIndex - 1);
+        if (event.key === "ArrowRight") showImage(currentIndex + 1);
+        if (event.key === "+" || event.key === "=") zoomIn();
+        if (event.key === "-") zoomOut();
+    });
+
+    stage.addEventListener("wheel", (event) => {
+        if (!lightbox.classList.contains("active")) return;
+        if (!event.ctrlKey) return;
+
+        event.preventDefault();
+        if (event.deltaY < 0) {
+            zoomIn();
+        } else {
+            zoomOut();
+        }
+    }, { passive: false });
+})();
+</script>
 
 </body>
 
