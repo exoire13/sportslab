@@ -34,65 +34,71 @@
 
 <style>
 
-    /* ========================================
-       HOURS NOTIFICATION
-       ======================================== */
+   /* ========================================
+   NEW HOURS NOTIFICATION
+   ======================================== */
 
-    .hours-notification {
-        width: 100%;
-        background: #0b5ed7;
-        position: relative;
-        z-index: 100;
-        text-align: center;
+.hours-notification {
+    width: 100%;
+    background: #0b5ed7;
+    position: relative;
+    z-index: 100;
+    text-align: center;
+
+    /* Push it below the fixed navbar */
+    margin-top: 80px;
+}
+
+.hours-notification a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 42px;
+    padding: 8px 15px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    transition: background 0.2s ease;
+}
+
+.hours-notification a:hover {
+    background: #084fae;
+    color: #ffffff;
+}
+
+.notification-dot {
+    width: 8px;
+    height: 8px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    animation: hoursPulse 1.5s infinite;
+}
+
+.notification-arrow {
+    font-size: 14px;
+    line-height: 1;
+}
+
+@keyframes hoursPulse {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
 
-    .hours-notification a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 9px;
-        min-height: 42px;
-        padding: 8px 15px;
-        color: #ffffff;
-        text-decoration: none;
-        font-family: 'Poppins', sans-serif;
-        font-size: 13px;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        transition: background 0.2s ease;
+    50% {
+        transform: scale(1.35);
+        opacity: 0.6;
     }
-
-    .hours-notification a:hover {
-        background: #084fae;
-        color: #ffffff;
-    }
-
-    .notification-dot {
-        width: 8px;
-        height: 8px;
-        background: #ffffff;
-        border-radius: 50%;
-        display: inline-block;
-        animation: hoursPulse 1.5s infinite;
-    }
-
-    .notification-arrow {
-        font-size: 14px;
-        line-height: 1;
-    }
-
-    @keyframes hoursPulse {
-        0%,
-        100% {
-            transform: scale(1);
-            opacity: 1;
-        }
-
-        50% {
-            transform: scale(1.35);
-            opacity: 0.6;
-        }
-    }
+}
 
 
     /* ========================================
