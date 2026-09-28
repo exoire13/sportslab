@@ -33,79 +33,68 @@
 
 <style>
 
-    /* HOURS NOTIFICATION */
-    .hours-notification {
-        width: 100%;
-        background: #111;
-        text-align: center;
-        position: relative;
-        z-index: 1000;
+/* NEW HOURS NOTIFICATION */
+.hours-notification {
+    width: 100%;
+    background: #0b5ed7 !important;
+    position: relative;
+    z-index: 99999;
+    text-align: center;
+    display: block;
+}
+
+.hours-notification a {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 42px;
+    padding: 8px 15px;
+    color: #ffffff !important;
+    background: #0b5ed7 !important;
+    text-decoration: none !important;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.hours-notification a:hover {
+    background: #084fae !important;
+    color: #ffffff !important;
+}
+
+.notification-dot {
+    width: 8px;
+    height: 8px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    animation: hoursPulse 1.5s infinite;
+}
+
+.notification-arrow {
+    font-size: 14px;
+    margin-left: 2px;
+}
+
+@keyframes hoursPulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
     }
 
-    .hours-notification a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        padding: 9px 15px;
-        color: #fff;
-        text-decoration: none;
-        font-family: 'Poppins', sans-serif;
-        font-size: 13px;
-        font-weight: 600;
-        letter-spacing: 0.4px;
-        transition: opacity 0.2s ease;
+    50% {
+        transform: scale(1.35);
+        opacity: 0.6;
     }
 
-    .hours-notification a:hover {
-        opacity: 0.75;
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
-
-    .hours-notification .notification-dot {
-        width: 7px;
-        height: 7px;
-        background: #fff;
-        border-radius: 50%;
-        display: inline-block;
-    }
-
-    .hours-notification .notification-arrow {
-        font-size: 12px;
-        margin-left: 2px;
-    }
-
-
-    .footer-hours-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .footer-hours h4 {
-        font-weight: 400;
-        margin-bottom: 10px;
-    }
-
-    .footer-hours-list {
-        font-weight: 400;
-    }
-
-    .footer-hours-list li {
-        margin-bottom: 6px;
-        line-height: 1.4;
-        font-weight: 400;
-    }
-
-    .footer-hours-list span {
-        display: inline-block;
-        min-width: 88px;
-        font-weight: 400;
-    }
-
-    .footer-hours-list strong {
-        font-weight: 400;
-    }
-
+}
 
     /* FALL HOURS */
     .fall-hours {
