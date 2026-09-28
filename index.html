@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,70 +34,107 @@
 
 <style>
 
-/* NEW HOURS NOTIFICATION */
-.hours-notification {
-    width: 100%;
-    background: #0b5ed7 !important;
-    position: relative;
-    z-index: 99999;
-    text-align: center;
-    display: block;
-}
+    /* ========================================
+       HOURS NOTIFICATION
+       ======================================== */
 
-.hours-notification a {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    min-height: 42px;
-    padding: 8px 15px;
-    color: #ffffff !important;
-    background: #0b5ed7 !important;
-    text-decoration: none !important;
-    font-family: 'Poppins', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-}
-
-.hours-notification a:hover {
-    background: #084fae !important;
-    color: #ffffff !important;
-}
-
-.notification-dot {
-    width: 8px;
-    height: 8px;
-    background: #ffffff;
-    border-radius: 50%;
-    display: inline-block;
-    animation: hoursPulse 1.5s infinite;
-}
-
-.notification-arrow {
-    font-size: 14px;
-    margin-left: 2px;
-}
-
-@keyframes hoursPulse {
-    0% {
-        transform: scale(1);
-        opacity: 1;
+    .hours-notification {
+        width: 100%;
+        background: #0b5ed7;
+        position: relative;
+        z-index: 100;
+        text-align: center;
     }
 
-    50% {
-        transform: scale(1.35);
-        opacity: 0.6;
+    .hours-notification a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        min-height: 42px;
+        padding: 8px 15px;
+        color: #ffffff;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        transition: background 0.2s ease;
     }
 
-    100% {
-        transform: scale(1);
-        opacity: 1;
+    .hours-notification a:hover {
+        background: #084fae;
+        color: #ffffff;
     }
-}
 
-    /* FALL HOURS */
+    .notification-dot {
+        width: 8px;
+        height: 8px;
+        background: #ffffff;
+        border-radius: 50%;
+        display: inline-block;
+        animation: hoursPulse 1.5s infinite;
+    }
+
+    .notification-arrow {
+        font-size: 14px;
+        line-height: 1;
+    }
+
+    @keyframes hoursPulse {
+        0%,
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        50% {
+            transform: scale(1.35);
+            opacity: 0.6;
+        }
+    }
+
+
+    /* ========================================
+       FOOTER HOURS
+       ======================================== */
+
+    .footer-hours-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-hours h4 {
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    .footer-hours-list {
+        font-weight: 400;
+    }
+
+    .footer-hours-list li {
+        margin-bottom: 6px;
+        line-height: 1.4;
+        font-weight: 400;
+    }
+
+    .footer-hours-list span {
+        display: inline-block;
+        min-width: 88px;
+        font-weight: 400;
+    }
+
+    .footer-hours-list strong {
+        font-weight: 400;
+    }
+
+
+    /* ========================================
+       FALL HOURS
+       ======================================== */
+
     .fall-hours {
         margin-top: 20px;
     }
@@ -112,7 +150,10 @@
     }
 
 
-    /* ABOUT INSTAGRAM REEL */
+    /* ========================================
+       INSTAGRAM REEL
+       ======================================== */
+
     .about-reel {
         width: 100%;
         display: flex;
@@ -127,6 +168,11 @@
         margin: 0 auto !important;
     }
 
+
+    /* ========================================
+       MOBILE
+       ======================================== */
+
     @media (max-width: 900px) {
 
         .about-reel {
@@ -135,6 +181,11 @@
 
         .about-reel .instagram-media {
             max-width: 540px !important;
+        }
+
+        .hours-notification a {
+            font-size: 12px;
+            min-height: 40px;
         }
 
     }
@@ -146,17 +197,11 @@
 
 <body>
 
-    <!-- NEW HOURS NOTIFICATION -->
-    <div class="hours-notification">
-        <a href="#hours">
-            <span class="notification-dot"></span>
-            NEW HOURS AVAILABLE
-            <span class="notification-arrow">↓</span>
-        </a>
-    </div>
 
+    <!-- ========================================
+         NAVIGATION
+         ======================================== -->
 
-    <!-- NAVIGATION -->
     <header class="navbar">
 
         <div class="nav-container">
@@ -218,7 +263,31 @@
     </header>
 
 
-    <!-- HERO -->
+    <!-- ========================================
+         NEW HOURS NOTIFICATION
+         ======================================== -->
+
+    <div class="hours-notification">
+
+        <a href="#hours">
+
+            <span class="notification-dot"></span>
+
+            NEW HOURS AVAILABLE
+
+            <span class="notification-arrow">
+                ↓
+            </span>
+
+        </a>
+
+    </div>
+
+
+    <!-- ========================================
+         HERO
+         ======================================== -->
+
     <main>
 
         <section class="hero">
@@ -243,11 +312,17 @@
 
                 <div class="hero-buttons">
 
-                    <a href="../booking/" class="btn btn-primary">
+                    <a
+                        href="../booking/"
+                        class="btn btn-primary"
+                    >
                         BOOK A CAGE
                     </a>
 
-                    <a href="#about" class="btn btn-secondary">
+                    <a
+                        href="#about"
+                        class="btn btn-secondary"
+                    >
                         LEARN MORE
                     </a>
 
@@ -256,43 +331,89 @@
             </div>
 
             <div class="scroll-indicator">
-                <span>SCROLL TO EXPLORE</span>
+
+                <span>
+                    SCROLL TO EXPLORE
+                </span>
+
                 <div class="scroll-line"></div>
+
             </div>
 
         </section>
 
 
-        <!-- QUICK STATS -->
+        <!-- ========================================
+             QUICK STATS
+             ======================================== -->
+
         <section class="stats">
 
             <div class="stat">
-                <strong>6</strong>
-                <span>Batting Cages</span>
+
+                <strong>
+                    6
+                </strong>
+
+                <span>
+                    Batting Cages
+                </span>
+
             </div>
 
-            <div class="stat">
-                <strong>6</strong>
-                <span>Days a Week</span>
-            </div>
 
             <div class="stat">
-                <strong>100%</strong>
-                <span>Focused on Your Game</span>
+
+                <strong>
+                    6
+                </strong>
+
+                <span>
+                    Days a Week
+                </span>
+
             </div>
 
+
             <div class="stat">
-                <strong>ALL</strong>
-                <span>Skill Levels</span>
+
+                <strong>
+                    100%
+                </strong>
+
+                <span>
+                    Focused on Your Game
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    ALL
+                </strong>
+
+                <span>
+                    Skill Levels
+                </span>
+
             </div>
 
         </section>
 
 
-        <!-- ABOUT -->
-        <section class="about section" id="about">
+        <!-- ========================================
+             ABOUT
+             ======================================== -->
+
+        <section
+            class="about section"
+            id="about"
+        >
 
             <div class="section-container">
+
 
                 <div class="about-reel">
 
@@ -339,7 +460,10 @@
                         doing it.
                     </p>
 
-                    <a href="../booking/" class="text-button">
+                    <a
+                        href="../booking/"
+                        class="text-button"
+                    >
                         RESERVE YOUR CAGE →
                     </a>
 
@@ -350,7 +474,10 @@
         </section>
 
 
-        <!-- SERVICES -->
+        <!-- ========================================
+             SERVICES
+             ======================================== -->
+
         <section class="services section">
 
             <div class="section-heading">
@@ -371,6 +498,9 @@
 
 
             <div class="service-grid">
+
+
+                <!-- SERVICE 01 -->
 
                 <div class="service-card">
 
@@ -398,6 +528,8 @@
                 </div>
 
 
+                <!-- SERVICE 02 -->
+
                 <div class="service-card">
 
                     <div class="service-number">
@@ -423,6 +555,8 @@
 
                 </div>
 
+
+                <!-- SERVICE 03 -->
 
                 <div class="service-card">
 
@@ -454,7 +588,10 @@
         </section>
 
 
-        <!-- CTA -->
+        <!-- ========================================
+             CTA
+             ======================================== -->
+
         <section class="cta">
 
             <div class="cta-content">
@@ -471,7 +608,10 @@
                     Stop waiting. Start swinging.
                 </p>
 
-                <a href="../booking/" class="btn btn-primary">
+                <a
+                    href="../booking/"
+                    class="btn btn-primary"
+                >
                     BOOK YOUR CAGE
                 </a>
 
@@ -482,15 +622,23 @@
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- ========================================
+         FOOTER
+         ======================================== -->
+
     <footer class="footer">
 
         <div class="footer-container">
 
+
             <!-- BRAND -->
+
             <div class="footer-brand">
 
-                <a href="../" class="logo">
+                <a
+                    href="../"
+                    class="logo"
+                >
                     SPORTS <span>LAB</span>
                 </a>
 
@@ -500,24 +648,32 @@
 
                 <div class="social-links">
 
-                    <!-- Instagram -->
+
+                    <!-- INSTAGRAM -->
+
                     <a
                         href="https://www.instagram.com/sportslab_az/"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Instagram"
                     >
+
                         <i class="fa-brands fa-instagram"></i>
+
                     </a>
 
-                    <!-- Facebook -->
+
+                    <!-- FACEBOOK -->
+
                     <a
                         href="https://www.facebook.com/share/1HDGzncBon/?mibextid=wwXIfr"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Facebook"
                     >
+
                         <i class="fa-brands fa-facebook"></i>
+
                     </a>
 
                 </div>
@@ -526,6 +682,7 @@
 
 
             <!-- QUICK LINKS -->
+
             <div class="footer-links">
 
                 <h4>
@@ -556,6 +713,7 @@
 
 
             <!-- CONTACT -->
+
             <div class="footer-contact">
 
                 <h4>
@@ -572,10 +730,13 @@
                 </a>
 
                 <p>
+
                     📞
+
                     <a href="tel:5207012963">
                         (520) 701-2963
                     </a>
+
                 </p>
 
                 <a href="mailto:joe@sportslabaz.com">
@@ -590,7 +751,11 @@
 
 
             <!-- HOURS -->
-            <div class="footer-hours" id="hours">
+
+            <div
+                class="footer-hours"
+                id="hours"
+            >
 
                 <h4>
                     REGULAR HOURS:
@@ -599,37 +764,45 @@
                 <ul class="footer-hours-list">
 
                     <li>
-                        <span>Monday:</span> 3PM - 9PM
+                        <span>Monday:</span>
+                        3PM - 9PM
                     </li>
 
                     <li>
-                        <span>Tuesday:</span> 3PM - 9PM
+                        <span>Tuesday:</span>
+                        3PM - 9PM
                     </li>
 
                     <li>
-                        <span>Wednesday:</span> 3PM - 9PM
+                        <span>Wednesday:</span>
+                        3PM - 9PM
                     </li>
 
                     <li>
-                        <span>Thursday:</span> 3PM - 9PM
+                        <span>Thursday:</span>
+                        3PM - 9PM
                     </li>
 
                     <li>
-                        <span>Friday:</span> 3PM - 9PM
+                        <span>Friday:</span>
+                        3PM - 9PM
                     </li>
 
                     <li>
-                        <span>Saturday:</span> 10AM - 8PM
+                        <span>Saturday:</span>
+                        10AM - 8PM
                     </li>
 
                     <li>
-                        <span>Sunday:</span> Closed
+                        <span>Sunday:</span>
+                        Closed
                     </li>
 
                 </ul>
 
 
                 <!-- FALL HOURS -->
+
                 <div class="fall-hours">
 
                     <h4>
@@ -643,11 +816,13 @@
                     <ul class="footer-hours-list">
 
                         <li>
-                            <span>Monday - Friday:</span> 10AM - 9PM
+                            <span>Monday - Friday:</span>
+                            10AM - 9PM
                         </li>
 
                         <li>
-                            <span>Saturday:</span> 10AM - 9PM
+                            <span>Saturday:</span>
+                            10AM - 9PM
                         </li>
 
                     </ul>
@@ -658,6 +833,7 @@
 
 
             <!-- BOOKING -->
+
             <div class="footer-book">
 
                 <h4>
@@ -683,7 +859,10 @@
         </div>
 
 
-        <!-- BOTTOM BAR -->
+        <!-- ========================================
+             BOTTOM BAR
+             ======================================== -->
+
         <div class="footer-bottom">
 
             <p>
@@ -696,7 +875,9 @@
                     Home
                 </a>
 
-                <span>•</span>
+                <span>
+                    •
+                </span>
 
                 <a href="../contact/">
                     Contact
@@ -709,9 +890,13 @@
     </footer>
 
 
-    <script async src="//www.instagram.com/embed.js"></script>
+    <script
+        async
+        src="//www.instagram.com/embed.js"
+    ></script>
+
     <script src="js/main.js"></script>
 
 </body>
 </html>
-
+```
