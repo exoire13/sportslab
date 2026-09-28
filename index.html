@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <link rel="icon" type="image/png" href="favicon.png">
@@ -32,171 +32,350 @@
         rel="stylesheet"
     >
 
-<style>
+    <style>
 
-   /* ========================================
-   NEW HOURS NOTIFICATION
-   ======================================== */
+        /* ========================================
+           NEW HOURS NOTIFICATION
+           ======================================== */
 
-.hours-notification {
-    width: 100%;
-    background: #0b5ed7;
-    position: relative;
-    z-index: 100;
-    text-align: center;
-
-    /* Push it below the fixed navbar */
-    margin-top: 80px;
-}
-
-.hours-notification a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    min-height: 42px;
-    padding: 8px 15px;
-
-    color: #ffffff;
-    text-decoration: none;
-
-    font-family: 'Poppins', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-
-    transition: background 0.2s ease;
-}
-
-.hours-notification a:hover {
-    background: #ae080846;
-    color: #ffffff;
-}
-
-.notification-dot {
-    width: 8px;
-    height: 8px;
-    background: #ffffff;
-    border-radius: 50%;
-    display: inline-block;
-    animation: hoursPulse 1.5s infinite;
-}
-
-.notification-arrow {
-    font-size: 14px;
-    line-height: 1;
-}
-
-@keyframes hoursPulse {
-    0%,
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    50% {
-        transform: scale(1.35);
-        opacity: 0.6;
-    }
-}
-
-
-    /* ========================================
-       FOOTER HOURS
-       ======================================== */
-
-    .footer-hours-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .footer-hours h4 {
-        font-weight: 400;
-        margin-bottom: 10px;
-    }
-
-    .footer-hours-list {
-        font-weight: 400;
-    }
-
-    .footer-hours-list li {
-        margin-bottom: 6px;
-        line-height: 1.4;
-        font-weight: 400;
-    }
-
-    .footer-hours-list span {
-        display: inline-block;
-        min-width: 88px;
-        font-weight: 400;
-    }
-
-    .footer-hours-list strong {
-        font-weight: 400;
-    }
-
-
-    /* ========================================
-       FALL HOURS
-       ======================================== */
-
-    .fall-hours {
-        margin-top: 20px;
-    }
-
-    .fall-hours h4 {
-        margin-bottom: 5px;
-    }
-
-    .fall-hours p {
-        margin: 0 0 8px;
-        font-size: 0.9rem;
-        opacity: 0.8;
-    }
-
-
-    /* ========================================
-       INSTAGRAM REEL
-       ======================================== */
-
-    .about-reel {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-    }
-
-    .about-reel .instagram-media {
-        width: 100% !important;
-        max-width: 540px !important;
-        min-width: 326px !important;
-        margin: 0 auto !important;
-    }
-
-
-    /* ========================================
-       MOBILE
-       ======================================== */
-
-    @media (max-width: 900px) {
-
-        .about-reel {
-            margin-bottom: 30px;
-        }
-
-        .about-reel .instagram-media {
-            max-width: 540px !important;
+        .hours-notification {
+            width: 100%;
+            background: #0b5ed7;
+            position: relative;
+            z-index: 100;
+            text-align: center;
+            margin-top: 80px;
         }
 
         .hours-notification a {
-            font-size: 12px;
-            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            min-height: 42px;
+            padding: 8px 15px;
+
+            color: #ffffff;
+            text-decoration: none;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+
+            transition: background 0.2s ease;
         }
 
-    }
+        .hours-notification a:hover {
+            background: #ae080846;
+            color: #ffffff;
+        }
 
-</style>
+        .notification-dot {
+            width: 8px;
+            height: 8px;
+            background: #ffffff;
+            border-radius: 50%;
+            display: inline-block;
+            animation: hoursPulse 1.5s infinite;
+        }
+
+        .notification-arrow {
+            font-size: 14px;
+            line-height: 1;
+        }
+
+        @keyframes hoursPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.35);
+                opacity: 0.6;
+            }
+        }
+
+
+        /* ========================================
+           FOOTER HOURS
+           ======================================== */
+
+        .footer-hours-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-hours h4 {
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .footer-hours-list {
+            font-weight: 400;
+        }
+
+        .footer-hours-list li {
+            margin-bottom: 6px;
+            line-height: 1.4;
+            font-weight: 400;
+        }
+
+        .footer-hours-list span {
+            display: inline-block;
+            min-width: 88px;
+            font-weight: 400;
+        }
+
+        .footer-hours-list strong {
+            font-weight: 400;
+        }
+
+
+        /* ========================================
+           FALL HOURS
+           ======================================== */
+
+        .fall-hours {
+            margin-top: 20px;
+        }
+
+        .fall-hours h4 {
+            margin-bottom: 5px;
+        }
+
+        .fall-hours p {
+            margin: 0 0 8px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+
+        /* ========================================
+           INSTAGRAM REEL
+           ======================================== */
+
+        .about-reel {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .about-reel .instagram-media {
+            width: 100% !important;
+            max-width: 540px !important;
+            min-width: 326px !important;
+            margin: 0 auto !important;
+        }
+
+
+        /* ========================================
+           CHRISTIAN LITTLE CAMP
+           ======================================== */
+
+        .christian-camp-section {
+            position: relative;
+            background: #0b0b0b;
+            color: #ffffff;
+            padding: 90px 24px;
+            overflow: hidden;
+        }
+
+        .christian-camp-section::before {
+            content: "";
+            position: absolute;
+            top: -140px;
+            left: -140px;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: rgba(11, 94, 215, 0.12);
+            filter: blur(10px);
+            pointer-events: none;
+        }
+
+        .christian-camp-container {
+            position: relative;
+            z-index: 2;
+
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .christian-camp-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            margin: 0 0 16px;
+
+            color: #4d96ff;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .christian-camp-label::before {
+            content: "";
+            width: 30px;
+            height: 2px;
+            background: #0b5ed7;
+        }
+
+        .christian-camp-section h2 {
+            margin: 0 0 24px;
+
+            color: #ffffff;
+
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(46px, 6vw, 76px);
+            font-weight: 700;
+            line-height: 0.96;
+            text-transform: uppercase;
+        }
+
+        .christian-camp-section h2 span {
+            color: #0b5ed7;
+        }
+
+        .christian-camp-description {
+            max-width: 525px;
+            margin: 0 0 28px;
+
+            color: #cccccc;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        .christian-camp-status {
+            display: inline-block;
+
+            margin: 0;
+            padding: 10px 16px;
+
+            background: #0b5ed7;
+            color: #ffffff;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .christian-camp-image {
+            position: relative;
+            width: 100%;
+        }
+
+        .christian-camp-image::before {
+            content: "";
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #0b5ed7;
+            z-index: -1;
+        }
+
+        .christian-camp-image img {
+            display: block;
+
+            width: 100%;
+            height: auto;
+            max-height: 580px;
+
+            object-fit: cover;
+            object-position: center;
+
+            background: #161616;
+        }
+
+
+        /* ========================================
+           MOBILE
+           ======================================== */
+
+        @media (max-width: 900px) {
+
+            .about-reel {
+                margin-bottom: 30px;
+            }
+
+            .about-reel .instagram-media {
+                max-width: 540px !important;
+            }
+
+            .hours-notification a {
+                font-size: 12px;
+                min-height: 40px;
+            }
+
+            .christian-camp-section {
+                padding: 60px 20px;
+            }
+
+            .christian-camp-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .christian-camp-section h2 {
+                font-size: clamp(42px, 12vw, 58px);
+            }
+
+            .christian-camp-description {
+                font-size: 15px;
+            }
+
+            .christian-camp-image::before {
+                top: 10px;
+                left: 10px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .christian-camp-section {
+                padding: 50px 18px;
+            }
+
+            .christian-camp-container {
+                gap: 32px;
+            }
+
+            .christian-camp-label {
+                font-size: 11px;
+                letter-spacing: 1.4px;
+            }
+
+            .christian-camp-section h2 {
+                font-size: 42px;
+            }
+
+            .christian-camp-image img {
+                max-height: none;
+            }
+        }
+
+    </style>
 
 </head>
 
@@ -403,6 +582,55 @@
                 <span>
                     Skill Levels
                 </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             CHRISTIAN LITTLE CAMP
+             ======================================== -->
+
+        <section
+            class="christian-camp-section"
+            id="christian-little-camp"
+        >
+
+            <div class="christian-camp-container">
+
+                <div class="christian-camp-content">
+
+                    <p class="christian-camp-label">
+                        NEW CAMP AT SPORTS LAB
+                    </p>
+
+                    <h2>
+                        NEW CAMP WITH<br>
+                        <span>CHRISTIAN LITTLE.</span>
+                    </h2>
+
+                    <p class="christian-camp-description">
+                        Sports Lab is excited to announce a new camp
+                        with Christian Little. Come train, compete,
+                        learn, and take your game to the next level.
+                    </p>
+
+                    <p class="christian-camp-status">
+                        CAMP DETAILS COMING SOON
+                    </p>
+
+                </div>
+
+
+                <div class="christian-camp-image">
+
+                    <img
+                        src="camp.png"
+                        alt="Christian Little Camp at Sports Lab"
+                    >
+
+                </div>
 
             </div>
 
@@ -904,5 +1132,5 @@
     <script src="js/main.js"></script>
 
 </body>
-</html>
 
+</html>
