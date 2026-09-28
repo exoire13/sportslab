@@ -1,34 +1,80 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
     <link rel="icon" type="image/png" href="favicon.png">
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <<title>
-    Sports Lab | Batting Cages in Casa Grande, AZ
-</title>
+    <title>
+        Sports Lab | Batting Cages in Casa Grande, AZ
+    </title>
 
-
-<meta
-    name="description"
-    content="Sports Lab offers batting cages, baseball and softball training, lessons, and cage rentals in Casa Grande, AZ. Book your cage today."
->
+    <meta
+        name="description"
+        content="Sports Lab offers batting cages, baseball and softball training, lessons, and cage rentals in Casa Grande, AZ. Book your cage today."
+    >
 
     <link rel="stylesheet" href="css/style.css">
-<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
 <style>
+
+    /* HOURS NOTIFICATION */
+    .hours-notification {
+        width: 100%;
+        background: #111;
+        text-align: center;
+        position: relative;
+        z-index: 1000;
+    }
+
+    .hours-notification a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 9px 15px;
+        color: #fff;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.4px;
+        transition: opacity 0.2s ease;
+    }
+
+    .hours-notification a:hover {
+        opacity: 0.75;
+    }
+
+    .hours-notification .notification-dot {
+        width: 7px;
+        height: 7px;
+        background: #fff;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .hours-notification .notification-arrow {
+        font-size: 12px;
+        margin-left: 2px;
+    }
+
+
     .footer-hours-list {
         list-style: none;
         padding: 0;
@@ -60,6 +106,23 @@
         font-weight: 400;
     }
 
+
+    /* FALL HOURS */
+    .fall-hours {
+        margin-top: 20px;
+    }
+
+    .fall-hours h4 {
+        margin-bottom: 5px;
+    }
+
+    .fall-hours p {
+        margin: 0 0 8px;
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+
+
     /* ABOUT INSTAGRAM REEL */
     .about-reel {
         width: 100%;
@@ -76,6 +139,7 @@
     }
 
     @media (max-width: 900px) {
+
         .about-reel {
             margin-bottom: 30px;
         }
@@ -83,6 +147,7 @@
         .about-reel .instagram-media {
             max-width: 540px !important;
         }
+
     }
 
 </style>
@@ -92,66 +157,77 @@
 
 <body>
 
-      <!-- NAVIGATION -->
-    <header class="navbar">
-
-    <div class="nav-container">
-
-        <a href="index.html" class="logo">
-            SPORTS <span>LAB</span>
+    <!-- NEW HOURS NOTIFICATION -->
+    <div class="hours-notification">
+        <a href="#hours">
+            <span class="notification-dot"></span>
+            NEW HOURS AVAILABLE
+            <span class="notification-arrow">↓</span>
         </a>
-
-        <nav class="nav-links" id="navLinks">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="booking/">
-                Book a Cage
-            </a>
-
-            <a href="pricing/">
-                Pricing
-            </a>
-
-            <a href="soon/">
-                Lessons
-            </a>
-
-            <a href="gallery/">
-                Gallery
-            </a>
-
-            <a href="contact/">
-                Contact
-            </a>
-
-        </nav>
-
-        <a
-            href="../booking/"
-            class="nav-button"
-        >
-            BOOK NOW
-        </a>
-
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-        >
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
     </div>
 
-</header>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                SPORTS <span>LAB</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="booking/">
+                    Book a Cage
+                </a>
+
+                <a href="pricing/">
+                    Pricing
+                </a>
+
+                <a href="soon/">
+                    Lessons
+                </a>
+
+                <a href="gallery/">
+                    Gallery
+                </a>
+
+                <a href="contact/">
+                    Contact
+                </a>
+
+            </nav>
+
+            <a
+                href="../booking/"
+                class="nav-button"
+            >
+                BOOK NOW
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
 
     <!-- HERO -->
     <main>
@@ -177,6 +253,7 @@
                 </p>
 
                 <div class="hero-buttons">
+
                     <a href="../booking/" class="btn btn-primary">
                         BOOK A CAGE
                     </a>
@@ -184,6 +261,7 @@
                     <a href="#about" class="btn btn-secondary">
                         LEARN MORE
                     </a>
+
                 </div>
 
             </div>
@@ -227,20 +305,27 @@
 
             <div class="section-container">
 
- <div class="about-reel">
-    <blockquote
-        class="instagram-media"
-        data-instgrm-permalink="https://www.instagram.com/reel/Ddj-R8BSYJc/?utm_source=ig_embed&amp;utm_campaign=loading"
-        data-instgrm-version="14"
-        style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:1px; max-width:540px; min-width:326px; padding:0; width:calc(100% - 2px);">
-        <a
-            href="https://www.instagram.com/reel/Ddj-R8BSYJc/?utm_source=ig_embed&amp;utm_campaign=loading"
-            target="_blank"
-            rel="noopener noreferrer">
-            View this post on Instagram
-        </a>
-    </blockquote>
-</div>
+                <div class="about-reel">
+
+                    <blockquote
+                        class="instagram-media"
+                        data-instgrm-permalink="https://www.instagram.com/reel/Ddj-R8BSYJc/?utm_source=ig_embed&amp;utm_campaign=loading"
+                        data-instgrm-version="14"
+                        style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:1px; max-width:540px; min-width:326px; padding:0; width:calc(100% - 2px);"
+                    >
+
+                        <a
+                            href="https://www.instagram.com/reel/Ddj-R8BSYJc/?utm_source=ig_embed&amp;utm_campaign=loading"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View this post on Instagram
+                        </a>
+
+                    </blockquote>
+
+                </div>
+
 
                 <div class="about-content">
 
@@ -409,39 +494,199 @@
 
 
     <!-- FOOTER -->
- <footer class="footer">
+    <footer class="footer">
 
-    <div class="footer-container">
+        <div class="footer-container">
 
-        <!-- BRAND -->
-        <div class="footer-brand">
+            <!-- BRAND -->
+            <div class="footer-brand">
 
-            <a href="../" class="logo">
-                SPORTS <span>LAB</span>
-            </a>
-
-            <p>
-                Train hard. Hit harder.
-            </p>
-
-            <div class="social-links">
-
-                <!-- Instagram -->
-                <a
-                    href="https://www.instagram.com/sportslab_az/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                >
-                     <i class="fa-brands fa-instagram"></i>
+                <a href="../" class="logo">
+                    SPORTS <span>LAB</span>
                 </a>
+
+                <p>
+                    Train hard. Hit harder.
+                </p>
+
+                <div class="social-links">
+
+                    <!-- Instagram -->
+                    <a
+                        href="https://www.instagram.com/sportslab_az/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                    >
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <!-- Facebook -->
+                    <a
+                        href="https://www.facebook.com/share/1HDGzncBon/?mibextid=wwXIfr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                    >
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+            <div class="footer-links">
+
+                <h4>
+                    QUICK LINKS
+                </h4>
+
+                <a href="../">
+                    Home
+                </a>
+
+                <a href="../pricing/">
+                    Pricing
+                </a>
+
+                <a href="../soon/">
+                    Lessons
+                </a>
+
+                <a href="../gallery/">
+                    Gallery
+                </a>
+
+                <a href="../contact/">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+            <div class="footer-contact">
+
+                <h4>
+                    FIND US
+                </h4>
+
                 <a
-                    href="https://www.facebook.com/share/1HDGzncBon/?mibextid=wwXIfr"
+                    href="https://www.google.com/maps?q=1375+East+Florence+Boulevard,+Casa+Grande,+AZ+85122"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Facebook"
                 >
-                     <i class="fa-brands fa-facebook"></i>
+                    📍 1375 E Florence Blvd<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Casa Grande, AZ 85122
+                </a>
+
+                <p>
+                    📞
+                    <a href="tel:5207012963">
+                        (520) 701-2963
+                    </a>
+                </p>
+
+                <a href="mailto:joe@sportslabaz.com">
+                    ✉️ joe@sportslabaz.com
+                </a>
+
+                <a href="mailto:brian@sportslabaz.com">
+                    ✉️ brian@sportslabaz.com
+                </a>
+
+            </div>
+
+
+            <!-- HOURS -->
+            <div class="footer-hours" id="hours">
+
+                <h4>
+                    REGULAR HOURS:
+                </h4>
+
+                <ul class="footer-hours-list">
+
+                    <li>
+                        <span>Monday:</span> 3PM - 9PM
+                    </li>
+
+                    <li>
+                        <span>Tuesday:</span> 3PM - 9PM
+                    </li>
+
+                    <li>
+                        <span>Wednesday:</span> 3PM - 9PM
+                    </li>
+
+                    <li>
+                        <span>Thursday:</span> 3PM - 9PM
+                    </li>
+
+                    <li>
+                        <span>Friday:</span> 3PM - 9PM
+                    </li>
+
+                    <li>
+                        <span>Saturday:</span> 10AM - 8PM
+                    </li>
+
+                    <li>
+                        <span>Sunday:</span> Closed
+                    </li>
+
+                </ul>
+
+
+                <!-- FALL HOURS -->
+                <div class="fall-hours">
+
+                    <h4>
+                        FALL HOURS:
+                    </h4>
+
+                    <p>
+                        September 28 – October 9
+                    </p>
+
+                    <ul class="footer-hours-list">
+
+                        <li>
+                            <span>Monday - Friday:</span> 10AM - 9PM
+                        </li>
+
+                        <li>
+                            <span>Saturday:</span> 10AM - 9PM
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOOKING -->
+            <div class="footer-book">
+
+                <h4>
+                    READY TO TRAIN?
+                </h4>
+
+                <p>
+                    Reserve your cage and
+                    get to work.
+                </p>
+
+                <a
+                    href="../booking/"
+                    class="footer-book-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    BOOK A CAGE →
                 </a>
 
             </div>
@@ -449,147 +694,35 @@
         </div>
 
 
-        <!-- QUICK LINKS -->
-        <div class="footer-links">
-
-            <h4>
-                QUICK LINKS
-            </h4>
-
-            <a href="../">
-                Home
-            </a>
-
-            <a href="../pricing/">
-                Pricing
-            </a>
-
-            <a href="../soon/">
-                Lessons
-            </a>
-
-            <a href="../gallery/">
-                Gallery
-            </a>
-
-            <a href="../contact/">
-                Contact
-            </a>
-
-        </div>
-
-
-        <!-- CONTACT -->
-        <div class="footer-contact">
-
-            <h4>
-                FIND US
-            </h4>
-
-            <a
-                href="https://www.google.com/maps?q=1375+East+Florence+Boulevard,+Casa+Grande,+AZ+85122"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                📍 1375 E Florence Blvd<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;Casa Grande, AZ 85122
-            </a>
+        <!-- BOTTOM BAR -->
+        <div class="footer-bottom">
 
             <p>
-                📞
-                <a href="tel:5207012963">
-                    (520) 701-2963
+                © 2026 Sports Lab. All rights reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+
+                <a href="../">
+                    Home
                 </a>
-            </p>
 
-            
-            <a href="mailto:joe@sportslabaz.com"
-            >
-                ✉️ joe@sportslabaz.com
-            </a>
-            
-            <a href="mailto:brian@sportslabaz.com">
-                ✉️ brian@sportslabaz.com
-            </a>
+                <span>•</span>
 
+                <a href="../contact/">
+                    Contact
+                </a>
+
+            </div>
 
         </div>
 
+    </footer>
 
-        <!-- HOURS -->
-        <div class="footer-hours">
-
-            <h4>
-                REGULAR HOURS:
-            </h4>
-
-            <ul class="footer-hours-list">
-                <li><span>Monday:</span> 3PM - 9PM</li>
-                <li><span>Tuesday:</span> 3PM - 9PM</li>
-                <li><span>Wednesday:</span> 3PM - 9PM</li>
-                <li><span>Thursday:</span> 3PM - 9PM</li>
-                <li><span>Friday:</span> 3PM - 9PM</li>
-                <li><span>Saturday:</span> 10AM - 8PM</li>
-                <li><span>Sunday:</span> Closed</li>
-            </ul>
-
-        </div>
-
-
-        <!-- BOOKING -->
-        <div class="footer-book">
-
-            <h4>
-                READY TO TRAIN?
-            </h4>
-
-            <p>
-                Reserve your cage and
-                get to work.
-            </p>
-
-            <a
-                href="../booking/"
-                class="footer-book-button"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                BOOK A CAGE →
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <!-- BOTTOM BAR -->
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 Sports Lab. All rights reserved.
-        </p>
-
-        <div class="footer-bottom-links">
-
-            <a href="../">
-                Home
-            </a>
-
-            <span>•</span>
-
-            <a href="../contact/">
-                Contact
-            </a>
-
-        </div>
-
-    </div>
-
-</footer>
 
     <script async src="//www.instagram.com/embed.js"></script>
     <script src="js/main.js"></script>
 
 </body>
 </html>
+
