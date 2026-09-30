@@ -1,33 +1,56 @@
 
+
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
+
 
     <link rel="icon" type="image/png" href="../favicon.png">
 
+
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 
     <title>Batting Cage Pricing | SPORTS LAB | Casa Grande, AZ</title>
 
+
+
     <link rel="stylesheet" href="../css/style.css">
 
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
+
     rel="stylesheet"
+
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+
 >
+
+
 
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+
+
     <style>
-        /* Keep cage rental cards left-to-right on desktop */
+        /* Compact cage-rental pricing layout */
         .pricing-section .pricing-grid {
             display: grid !important;
-            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-            gap: 28px !important;
-            max-width: 1250px;
+            grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+            gap: 20px !important;
+            max-width: 1400px;
             margin-left: auto;
             margin-right: auto;
             align-items: stretch;
@@ -36,9 +59,59 @@
         .pricing-section .pricing-card {
             width: 100%;
             min-width: 0;
+            max-width: none;
+            min-height: 100%;
+            padding: 34px 26px;
         }
 
-        @media (max-width: 1000px) {
+        .pricing-section .pricing-card h3 {
+            font-size: 27px;
+        }
+
+        .pricing-section .pricing-card .price {
+            font-size: 48px;
+        }
+
+        .pricing-section .pricing-card .price span {
+            font-size: 24px;
+        }
+
+        .pricing-section .pricing-features li {
+            font-size: 12px;
+        }
+
+        .dual-rental-price {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 18px 0 10px;
+        }
+
+        .dual-rental-option {
+            padding: 14px 10px;
+            border: 1px solid #292929;
+            background: #111;
+            text-align: center;
+        }
+
+        .dual-rental-option strong {
+            display: block;
+            font-family: "Oswald", sans-serif;
+            font-size: 30px;
+            line-height: 1;
+            color: #fff;
+        }
+
+        .dual-rental-option span {
+            display: block;
+            margin-top: 5px;
+            color: #D4AF37;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .7px;
+        }
+
+        @media (max-width: 1100px) {
             .pricing-section .pricing-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
             }
@@ -48,166 +121,248 @@
             .pricing-section .pricing-grid {
                 grid-template-columns: 1fr !important;
             }
+
+            .pricing-section .pricing-card {
+                padding: 30px 22px;
+            }
         }
     </style>
 
+
+
 </head>
+
+
 
 <script src="js/main.js"></script>
 
+
+
 <div id="page-loader">
+
     <div class="loader-content">
+
         <div class="loader-ball">⚾</div>
+
         <p>LOADING...</p>
+
     </div>
+
 </div>
+
+
 
 <body>
 
+
+
     <!-- NAVIGATION -->
+
 <header class="navbar">
+
+
 
     <div class="nav-container">
 
+
+
         <a href="../" class="logo">
+
             SPORTS <span>LAB</span>
+
         </a>
+
+
 
         <nav class="nav-links" id="navLinks">
 
+
+
             <a href="../">
+
                 Home
+
             </a>
+
+
 
             <a href="../booking/">
+
                 Book a Cage
+
             </a>
+
+
 
             <a href="../pricing/">
+
                 Pricing
+
             </a>
+
+
 
             <a href="../soon/">
+
                 Lessons
+
             </a>
+
+
 
             <a href="../gallery/">
+
                 Gallery
+
             </a>
 
+
+
             <a href="../contact/">
+
                 Contact
+
             </a>
+
+
 
         </nav>
 
+
+
         <a
+
             href="../booking/"
+
             class="nav-button"
+
         >
+
             BOOK NOW
+
         </a>
 
+
+
         <button
+
             class="menu-toggle"
+
             id="menuToggle"
+
             aria-label="Open navigation menu"
+
             aria-expanded="false"
+
         >
+
             <span></span>
+
             <span></span>
+
             <span></span>
+
         </button>
 
+
+
     </div>
+
+
 
 </header>
 
 
+
+
+
     <!-- PAGE HERO -->
+
     <section class="page-hero">
+
+
 
         <div class="page-hero-content">
 
+
+
             <p class="hero-small">
+
                 SIMPLE. FLEXIBLE. AFFORDABLE.
+
             </p>
+
+
 
             <h1>
+
                 PRICING
+
             </h1>
 
+
+
             <p>
+
                 Get the training time you need without breaking the bank.
+
             </p>
 
+
+
         </div>
+
+
 
     </section>
 
 
+
+
+
     <!-- CAGE RENTAL -->
+
     <section class="pricing-section">
+
+
 
         <div class="section-heading">
 
+
+
             <p class="section-label">
+
                 CAGE RENTALS
+
             </p>
+
+
 
             <h2>
+
                 GET IN THE CAGE
+
             </h2>
 
+
+
             <p>
+
                 Choose the option that works best for your training.
+
             </p>
+
+
 
         </div>
 
 
+
+
+
         <div class="pricing-grid">
 
-            <!-- 30 MINUTES -->
-            <div class="pricing-card">
-
-                <div class="pricing-card-top">
-
-                    <p class="pricing-label">
-                        QUICK SESSION
-                    </p>
-
-                    <h3>
-                        30 MINUTES
-                    </h3>
-
-                    <div class="price">
-                        <span>$</span>25
-                    </div>
-
-                    <p class="price-description">
-                        Perfect for a quick hitting session.
-                    </p>
-
-                </div>
-
-                <ul class="pricing-features">
-
-                    <li>✓ 30 minutes of cage time</li>
-                    <li>✓ Baseball or softball</li>
-                    <li>✓ Pitching machine access</li>
-                    <li>✓ All skill levels welcome</li>
-
-                </ul>
-
-                <a href="../booking/" class="pricing-button">
-                    BOOK NOW
-                </a>
-
-            </div>
-
-
-            <!-- 60 MINUTES -->
+            <!-- CAGE RENTALS -->
             <div class="pricing-card featured">
 
                 <div class="popular-badge">
@@ -217,31 +372,38 @@
                 <div class="pricing-card-top">
 
                     <p class="pricing-label">
-                        BEST VALUE
+                        INDIVIDUAL CAGE RENTAL
                     </p>
 
                     <h3>
-                        60 MINUTES
+                        30 OR 60 MINUTES
                     </h3>
 
-                    <div class="price">
-                        <span>$</span>40
+                    <div class="dual-rental-price">
+
+                        <div class="dual-rental-option">
+                            <strong>$25</strong>
+                            <span>30 MINUTES</span>
+                        </div>
+
+                        <div class="dual-rental-option">
+                            <strong>$40</strong>
+                            <span>60 MINUTES</span>
+                        </div>
+
                     </div>
 
                     <p class="price-description">
-                        Get more reps and more time to improve.
+                        Choose the session length that fits your workout. Great for hitting, pitching, tee work, and focused individual training.
                     </p>
 
                 </div>
 
                 <ul class="pricing-features">
-
-                    <li>✓ 60 minutes of cage time</li>
+                    <li>✓ Choose 30 or 60 minutes</li>
                     <li>✓ Baseball or softball</li>
                     <li>✓ Pitching machine access</li>
-                    <li>✓ All skill levels welcome</li>
-                    <li>✓ Great for individual training</li>
-
+                    <li>✓ Great for individual practice</li>
                 </ul>
 
                 <a href="../booking/" class="pricing-button">
@@ -251,434 +413,890 @@
             </div>
 
 
-           
-        
-            <!-- TEAM RENTALS -->
+            <!-- TEAM RENTAL PER CAGE -->
             <div class="pricing-card">
 
                 <div class="pricing-card-top">
 
                     <p class="pricing-label">
-                        TEAM TRAINING
+                        FLEXIBLE TEAM TRAINING
                     </p>
 
                     <h3>
-                        TEAM RENTALS
+                        TEAM RENTAL PER CAGE
                     </h3>
 
                     <div class="price">
-                        <span>$</span>200–255
+                        <span>$</span>65
                     </div>
 
                     <p class="price-description">
-                        Two hours of dedicated cage space for team practices and group training.
+                        Rent one or two cages for individual practice, team training, or hitting sessions.
                     </p>
 
                 </div>
 
                 <ul class="pricing-features">
-
-                    <li>✓ 2 hours of team cage time</li>
-                    <li>✓ Team Cages 3: Cages 3, 4 &amp; 5</li>
-                    <li>✓ Team Cages 4: Cages 3, 4, 5 &amp; 6</li>
+                    <li>✓ $65 per hour, per cage</li>
+                    <li>✓ Two cages: $130 per hour total</li>
                     <li>✓ Baseball or softball</li>
-                    <li>✓ Great for full team practices</li>
-
+                    <li>✓ Great for smaller team sessions</li>
                 </ul>
 
-                <a href="../booking/" class="pricing-button">
+                <a href="https://book.runswiftapp.com/facilities/sports-lab/rentals?rentalId=7439" class="pricing-button">
                     BOOK TEAM RENTAL
                 </a>
 
             </div>
 
-</div>
+
+            <!-- TEAM CAGES 3 -->
+            <div class="pricing-card">
+
+                <div class="pricing-card-top">
+
+                    <p class="pricing-label">
+                        LARGE TEAM SPACE
+                    </p>
+
+                    <h3>
+                        TEAM CAGES 3
+                    </h3>
+
+                    <div class="price">
+                        <span>$</span>200
+                    </div>
+
+                    <p class="price-description">
+                        A 60' × 39' team practice area using Cages 3, 4, and 5 together, with dividers available as needed.
+                    </p>
+
+                </div>
+
+                <ul class="pricing-features">
+                    <li>✓ 2 hours of team training</li>
+                    <li>✓ Includes Cages 3, 4 &amp; 5</li>
+                    <li>✓ Open layout or divided cages</li>
+                    <li>✓ Baseball or softball setup</li>
+                </ul>
+
+                <a href="https://book.runswiftapp.com/facilities/sports-lab/rentals?rentalId=6996" class="pricing-button">
+                    BOOK TEAM CAGES 3
+                </a>
+
+            </div>
+
+
+            <!-- TEAM CAGES 4 -->
+            <div class="pricing-card">
+
+                <div class="pricing-card-top">
+
+                    <p class="pricing-label">
+                        MAXIMUM TEAM SPACE
+                    </p>
+
+                    <h3>
+                        TEAM CAGES 4
+                    </h3>
+
+                    <div class="price">
+                        <span>$</span>255
+                    </div>
+
+                    <p class="price-description">
+                        Use Cages 3, 4, 5, and 6 together for a larger team setup with open training space plus a separate batting cage.
+                    </p>
+
+                </div>
+
+                <ul class="pricing-features">
+                    <li>✓ 2 hours of team training</li>
+                    <li>✓ Includes Cages 3, 4, 5 &amp; 6</li>
+                    <li>✓ Open training + separate batting cage</li>
+                    <li>✓ Best for full-team practices</li>
+                </ul>
+
+                <a href="https://book.runswiftapp.com/facilities/sports-lab/rentals?rentalId=7185" class="pricing-button">
+                    BOOK TEAM CAGES 4
+                </a>
+
+            </div>
+
+        </div>
 
     </section>
 
 
+
+
+
     <!-- MEMBERSHIPS -->
+
     <section class="membership-section">
+
+
 
         <div class="section-heading">
 
+
+
             <p class="section-label">
+
                 TRAIN MORE. SAVE MORE.
+
             </p>
+
+
 
             <h2>
+
                 MEMBERSHIPS
+
             </h2>
 
+
+
             <p>
+
                 For players who are serious about getting better.
+
             </p>
 
+
+
         </div>
+
+
+
+
 
 
 
         <div class="membership-grid" style="
+
             display: grid;
+
             grid-template-columns: repeat(3, minmax(0, 1fr));
+
             gap: 28px;
+
             max-width: 1250px;
+
             margin: 0 auto;
+
             align-items: stretch;
+
         ">
 
+
+
             <!-- STANDARD MEMBERSHIP -->
+
             <div class="membership-card membership-featured">
 
+
+
                 <div class="membership-badge">
+
                     BEST VALUE
+
                 </div>
+
+
 
                 <div class="membership-icon">
+
                     🔥
+
                 </div>
+
+
 
                 <h3>
+
                     STANDARD
+
                 </h3>
 
+
+
                 <div class="membership-price">
+
                     $120<span>/month</span>
+
                 </div>
 
+
+
                 <p>
+
                     Built for players who want to train consistently.
+
                 </p>
+
+
 
                 <ul>
 
+
+
                     <li>✓ 1 Hour per day (subject to availability)</li>
+
                     <li>✓ Bring A Friend (1 voucher per month)</li>
+
                     <li>✓ 20% off camps, clinics, and classes</li>
+
                     <li>✓ Extra $15 per 30 minutes of additional training</li>
 
+
+
                 </ul>
+
+
 
                 <a href="https://book.runswiftapp.com/facilities/sports-lab/memberships?membershipId=7094" class="membership-button">
+
                     GET STARTED
+
                 </a>
+
+
 
             </div>
 
+
+
                         <!-- FAMILY MEMBERSHIP -->
+
             <div class="membership-card family-membership-card">
 
+
+
                 <div class="family-membership-badge">
+
                     FAMILY PLAN
+
                 </div>
+
+
 
                 <div class="membership-icon">
+
                     👪
+
                 </div>
+
+
 
                 <h3>
+
                     FAMILY MEMBERSHIP
+
                 </h3>
 
+
+
                 <div class="membership-price">
+
                     $175<span>/month</span>
+
                 </div>
 
+
+
                 <p>
+
                     Built for players who want to train consistently.
+
                 </p>
+
+
 
                 <ul>
 
+
+
                     <li>✓ Up to 3 members per household</li>
+
                     <li>✓ 1 Hour per day (subject to availability)</li>
+
                     <li>✓ Bring A Friend (1 voucher per month)</li>
+
                     <li>✓ 20% off camps, clinics, and classes</li>
+
                     <li>✓ Extra $15 per 30 minutes of additional training</li>
+
+
 
                 </ul>
 
+
+
                 <a href="https://book.runswiftapp.com/facilities/sports-lab/memberships?membershipId=8029" class="membership-button">
+
                     GET STARTED
+
                 </a>
 
+
+
             </div>
+
+
+
 
 
             <!-- TEAM CONTRACTS -->
+
             <div class="membership-card">
 
+
+
                 <div class="membership-icon">
+
                     🏆
+
                 </div>
+
+
 
                 <h3>
+
                     TEAM CONTRACTS
+
                 </h3>
 
+
+
                 <div class="membership-price">
+
                     CUSTOM<span> pricing</span>
+
                 </div>
 
+
+
                 <p>
+
                     Flexible training packages for teams, coaches, and organizations.
+
                 </p>
+
+
 
                 <ul>
 
+
+
                     <li>✓ Team cage rental packages</li>
+
                     <li>✓ Recurring training times</li>
+
                     <li>✓ Flexible scheduling options</li>
+
                     <li>✓ Custom rates based on team needs</li>
+
+
 
                 </ul>
 
+
+
                 <a href="../contact/" class="membership-button">
+
                     CONTACT US
+
                 </a>
+
+
 
             </div>
 
+
+
         </div>
 
+
+
         <style>
+
             .family-membership-card {
+
                 position: relative;
+
                 border: 1px solid rgba(255, 255, 255, 0.14);
+
                 background:
+
                     linear-gradient(
+
                         180deg,
+
                         rgba(255, 255, 255, 0.06) 0%,
+
                         rgba(255, 255, 255, 0.02) 100%
+
                     );
+
                 transform: translateY(0);
+
             }
+
+
 
             .family-membership-card::before {
+
                 content: "";
+
                 position: absolute;
+
                 inset: 0;
+
                 border-radius: inherit;
+
                 pointer-events: none;
+
                 box-shadow:
+
                     inset 0 1px 0 rgba(255, 255, 255, 0.08),
+
                     0 18px 45px rgba(0, 0, 0, 0.20);
+
             }
+
+
 
             .family-membership-card:hover {
+
                 transform: translateY(-6px);
+
             }
+
+
 
             .family-membership-badge {
+
                 position: absolute;
+
                 top: 16px;
+
                 right: 16px;
+
                 padding: 7px 11px;
+
                 border-radius: 999px;
+
                 background: rgba(255, 255, 255, 0.10);
+
                 border: 1px solid rgba(255, 255, 255, 0.14);
+
                 font-family: "Oswald", sans-serif;
+
                 font-size: 0.72rem;
+
                 font-weight: 700;
+
                 letter-spacing: 0.10em;
+
                 text-transform: uppercase;
+
             }
+
+
 
             .family-membership-card .membership-icon {
+
                 transform: scale(1.08);
+
             }
+
+
 
             .family-membership-card .membership-price {
+
                 font-size: 2.25rem;
+
             }
+
+
 
             .family-membership-card .membership-button {
+
                 background: transparent;
+
                 border: 2px solid currentColor;
+
             }
+
+
 
             .family-membership-card .membership-button:hover {
+
                 background: rgba(255, 255, 255, 0.08);
+
             }
 
+
+
             @media (max-width: 1000px) {
+
                 .membership-grid {
+
                     grid-template-columns: 1fr !important;
+
                     max-width: 620px !important;
+
                 }
+
             }
+
         </style>
+
+
 
     </section>
 
 
+
+
+
     <!-- FOOTER -->
+
 <footer class="footer">
+
+
 
     <div class="footer-container">
 
+
+
         <!-- BRAND -->
+
         <div class="footer-brand">
 
+
+
             <a href="../" class="logo">
+
                 SPORTS <span>LAB</span>
+
             </a>
 
+
+
             <p>
+
                 Train hard. Hit harder.
+
             </p>
+
+
 
             <div class="social-links">
 
+
+
                 <!-- Instagram -->
-                <a
-                    href="https://www.instagram.com/sportslab_az/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                >
-                     <i class="fa-brands fa-instagram"></i>
-                </a>
 
                 <a
-                    href="https://www.facebook.com/share/1HDGzncBon/?mibextid=wwXIfr"
+
+                    href="https://www\.instagram.com/sportslab_az/"
+
                     target="_blank"
+
                     rel="noopener noreferrer"
-                    aria-label="Facebook"
+
+                    aria-label="Instagram"
+
                 >
-                     <i class="fa-brands fa-facebook"></i>
+
+                     <i class="fa-brands fa-instagram"></i>
+
                 </a>
+
+
+
+                <a
+
+                    href="https://www\.facebook.com/share/1HDGzncBon/?mibextid=wwXIfr"
+
+                    target="_blank"
+
+                    rel="noopener noreferrer"
+
+                    aria-label="Facebook"
+
+                >
+
+                     <i class="fa-brands fa-facebook"></i>
+
+                </a>
+
+
 
             </div>
 
+
+
         </div>
+
+
+
 
 
         <!-- QUICK LINKS -->
+
         <div class="footer-links">
 
+
+
             <h4>
+
                 QUICK LINKS
+
             </h4>
 
+
+
             <a href="../">
+
                 Home
+
             </a>
+
+
 
             <a href="../pricing/">
+
                 Pricing
+
             </a>
+
+
 
             <a href="../soon/">
+
                 Lessons
+
             </a>
+
+
 
             <a href="../gallery/">
+
                 Gallery
+
             </a>
+
+
 
             <a href="../contact/">
+
                 Contact
+
             </a>
 
+
+
         </div>
+
+
+
 
 
         <!-- CONTACT -->
+
         <div class="footer-contact">
 
+
+
             <h4>
+
                 FIND US
+
             </h4>
 
+
+
             <a
-                href="https://www.google.com/maps?q=1375+East+Florence+Boulevard,+Casa+Grande,+AZ+85122"
+
+                href="https://www\.google.com/maps?q=1375+East+Florence+Boulevard,+Casa+Grande,+AZ+85122"
+
                 target="_blank"
+
                 rel="noopener noreferrer"
+
             >
+
                 📍 1375 E Florence Blvd<br>
+
                 &nbsp;&nbsp;&nbsp;&nbsp;Casa Grande, AZ 85122
+
             </a>
 
+
+
             <p>
+
                 📞
+
                 <a href="tel:5207012963">
+
                     (520) 701-2963
 
 
+
+
+
                 </a>
+
             </p>
 
+
+
             <a href="mailto:joe@sportslabaz.com">
+
                 ✉️ joe@sportslabaz.com
-            </a>
-            
-            <a href="mailto:brian@sportslabaz.com">
-                ✉️ brain@sportslabaz.com
+
             </a>
 
+
+
+            <a href="mailto:brian@sportslabaz.com">
+
+                ✉️ brian@sportslabaz.com
+
+            </a>
+
+
+
         </div>
+
+
+
 
 
         <!-- BOOKING -->
+
         <div class="footer-book">
 
+
+
             <h4>
+
                 READY TO TRAIN?
+
             </h4>
 
+
+
             <p>
+
                 Reserve your cage and
+
                 get to work.
+
             </p>
 
+
+
             <a
+
                 href="../booking/"
+
                 class="footer-book-button"
+
                 target="_blank"
+
                 rel="noopener noreferrer"
+
             >
+
                 BOOK A CAGE →
+
             </a>
+
+
 
         </div>
 
+
+
     </div>
+
+
+
 
 
     <!-- BOTTOM BAR -->
 
+
+
     <div class="footer-bottom">
 
+
+
         <p>
+
             © 2026 Sports Lab. All rights reserved.
+
         </p>
+
+
 
         <div class="footer-bottom-links">
 
+
+
             <a href="../">
+
                 Home
+
             </a>
+
+
 
             <span>•</span>
 
+
+
             <a href="../contact/">
+
                 Contact
+
             </a>
+
+
 
             <span>•</span>
 
+
+
             <a href="../contact/">
+
                 Team Contracts / Memberships — Contact Us
+
             </a>
+
+
 
         </div>
 
+
+
     </div>
+
+
 
 </footer>
 
+
+
     <script src="../js/main.js"></script>
 
+
+
 </body>
+
 </html>
