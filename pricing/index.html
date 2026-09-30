@@ -423,7 +423,7 @@
                     </p>
 
                     <h3>
-                     RENTAL PER CAGE
+                    TEAM     RENTAL PER CAGE
                     </h3>
 
                     <div class="price">
@@ -865,6 +865,8 @@
 
                     <li>✓ Individual cage rental</li>
 
+                    <li>✓ Private event setup support</li>
+
 
 
                 </ul>
@@ -888,6 +890,21 @@
 
 
         <style>
+
+            .membership-card {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+            }
+
+            .membership-card > p {
+                min-height: 46px;
+            }
+
+            .membership-card .membership-button {
+                margin-top: auto;
+            }
 
             .family-membership-card {
 
@@ -1007,7 +1024,19 @@
 
 
 
-            @media (max-width: 1000px) {
+            @media (max-width: 1200px) {
+
+                .membership-grid {
+
+                    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+                    max-width: 900px !important;
+
+                }
+
+            }
+
+            @media (max-width: 700px) {
 
                 .membership-grid {
 
