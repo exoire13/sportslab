@@ -1,743 +1,97 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <link rel="icon" type="image/png" href="favicon.png">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>
-        Sports Lab | Batting Cages in Casa Grande, AZ
-    </title>
-
-    <meta
-        name="description"
-        content="Sports Lab offers batting cages, baseball and softball training, lessons, camps, and cage rentals in Casa Grande, AZ."
-    >
+    <title>Sports Lab | Batting Cages in Casa Grande, AZ</title>
+    <meta name="description" content="Sports Lab offers batting cages, baseball and softball training, lessons, and cage rentals in Casa Grande, AZ.">
 
     <link rel="stylesheet" href="css/style.css">
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-
-        /* ========================================
-           NEW HOURS NOTIFICATION
-           ======================================== */
-
-        .hours-notification {
-            width: 100%;
-            background: #0b5ed7;
-            position: relative;
-            z-index: 100;
-            text-align: center;
-
-            margin-top: 80px;
-        }
-
-
-        .hours-notification a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            gap: 9px;
-
-            min-height: 42px;
-
-            padding: 8px 15px;
-
-            color: #ffffff;
-            text-decoration: none;
-
-            font-family: 'Poppins', sans-serif;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-
-            transition: background 0.2s ease;
-        }
-
-
-        .hours-notification a:hover {
-            background: #094dad;
-            color: #ffffff;
-        }
-
-
-        .notification-dot {
-            width: 8px;
-            height: 8px;
-
-            background: #ffffff;
-
-            border-radius: 50%;
-
-            display: inline-block;
-
-            animation: hoursPulse 1.5s infinite;
-        }
-
-
-        .notification-arrow {
-            font-size: 14px;
-            line-height: 1;
-        }
-
-
-        @keyframes hoursPulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-
-            50% {
-                transform: scale(1.35);
-                opacity: 0.6;
-            }
-
-        }
-
-
-
-        /* ========================================
-           FOOTER HOURS
-           ======================================== */
-
+        /* FOOTER HOURS */
         .footer-hours-list {
             list-style: none;
-
             padding: 0;
             margin: 0;
-
             font-weight: 400;
         }
-
 
         .footer-hours h4 {
             font-weight: 400;
             margin-bottom: 10px;
         }
 
-
         .footer-hours-list li {
             margin-bottom: 6px;
-
             line-height: 1.4;
-
             font-weight: 400;
         }
-
 
         .footer-hours-list span {
             display: inline-block;
-
             min-width: 88px;
-
             font-weight: 400;
         }
-
 
         .footer-hours-list strong {
             font-weight: 400;
         }
 
-
-
-        /* ========================================
-           FALL HOURS
-           ======================================== */
-
-        .fall-hours {
-            margin-top: 20px;
-        }
-
-
-        .fall-hours h4 {
-            margin-bottom: 5px;
-        }
-
-
-        .fall-hours p {
-            margin: 0 0 8px;
-
-            font-size: 0.9rem;
-
-            opacity: 0.8;
-        }
-
-
-
-        /* ========================================
-           INSTAGRAM REEL
-           ======================================== */
-
+        /* INSTAGRAM REEL */
         .about-reel {
             width: 100%;
-
             display: flex;
-
             justify-content: center;
             align-items: flex-start;
         }
 
-
         .about-reel .instagram-media {
             width: 100% !important;
-
             max-width: 540px !important;
             min-width: 326px !important;
-
             margin: 0 auto !important;
         }
 
-
-
-        /* ========================================
-           CHRISTIAN LITTLE CAMP
-           ======================================== */
-
-        .christian-camp-section {
-            position: relative;
-
-            width: 100%;
-
-            background: #080808;
-
-            color: #ffffff;
-
-            padding: 90px 25px;
-
-            overflow: hidden;
-        }
-
-
-        .christian-camp-section::before {
-            content: "";
-
-            position: absolute;
-
-            width: 450px;
-            height: 450px;
-
-            top: -200px;
-            left: -200px;
-
-            border-radius: 50%;
-
-            background: rgba(255, 194, 0, 0.08);
-
-            pointer-events: none;
-        }
-
-
-        .christian-camp-container {
-            position: relative;
-
-            z-index: 2;
-
-            width: 100%;
-
-            max-width: 1200px;
-
-            margin: 0 auto;
-
-            display: grid;
-
-            grid-template-columns:
-                minmax(0, 1fr)
-                minmax(350px, 520px);
-
-            align-items: center;
-
-            gap: 70px;
-        }
-
-
-
-        /* CAMP TEXT */
-
-        .christian-camp-content {
-            width: 100%;
-        }
-
-
-        .christian-camp-label {
-            display: flex;
-
-            align-items: center;
-
-            gap: 12px;
-
-            margin: 0 0 17px;
-
-            color: #ffc400;
-
-            font-family: 'Poppins', sans-serif;
-
-            font-size: 13px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-        }
-
-
-        .christian-camp-label::before {
-            content: "";
-
-            width: 35px;
-            height: 2px;
-
-            background: #ffc400;
-        }
-
-
-        .christian-camp-section h2 {
-            margin: 0 0 24px;
-
-            font-family: 'Oswald', sans-serif;
-
-            font-size: clamp(48px, 6vw, 78px);
-
-            line-height: 0.95;
-
-            font-weight: 700;
-
-            color: #ffffff;
-
-            text-transform: uppercase;
-        }
-
-
-        .christian-camp-section h2 span {
-            color: #ffc400;
-        }
-
-
-        .christian-camp-description {
-            max-width: 560px;
-
-            margin: 0 0 20px;
-
-            color: #d0d0d0;
-
-            font-family: 'Poppins', sans-serif;
-
-            font-size: 16px;
-
-            line-height: 1.8;
-        }
-
-
-
-        /* CAMP DETAILS */
-
-        .camp-details {
-            margin: 25px 0 0;
-
-            display: flex;
-
-            flex-direction: column;
-
-            gap: 9px;
-        }
-
-
-        .camp-detail {
-            display: flex;
-
-            align-items: center;
-
-            gap: 10px;
-
-            color: #ffffff;
-
-            font-family: 'Poppins', sans-serif;
-
-            font-size: 14px;
-
-            font-weight: 500;
-        }
-
-
-        .camp-detail i {
-            width: 20px;
-
-            color: #ffc400;
-
-            text-align: center;
-        }
-
-
-
-        /* CAMP BUTTON */
-
-        .christian-camp-actions {
-            display: flex;
-
-            align-items: center;
-
-            flex-wrap: wrap;
-
-            gap: 14px;
-
-            margin-top: 32px;
-        }
-
-
-        .christian-camp-book {
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            gap: 12px;
-
-            min-height: 54px;
-
-            padding: 14px 30px;
-
-            background: #ffc400;
-
-            color: #080808;
-
-            border: 2px solid #ffc400;
-
-            font-family: 'Poppins', sans-serif;
-
-            font-size: 13px;
-
-            font-weight: 700;
-
-            letter-spacing: 1px;
-
-            text-decoration: none;
-
-            text-transform: uppercase;
-
-            transition:
-                background 0.2s ease,
-                color 0.2s ease,
-                border-color 0.2s ease,
-                transform 0.2s ease;
-        }
-
-
-        .christian-camp-book:hover {
-            background: #ffffff;
-
-            border-color: #ffffff;
-
-            color: #080808;
-
-            transform: translateY(-2px);
-        }
-
-
-
-        /* ========================================
-           CAMP IMAGE
-           IMPORTANT: NO CROPPING
-           ======================================== */
-
-        .christian-camp-image {
-            width: 100%;
-
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-            position: relative;
-        }
-
-
-        .christian-camp-image::before {
-            content: "";
-
-            position: absolute;
-
-            width: calc(100% - 20px);
-            height: calc(100% - 20px);
-
-            top: 20px;
-            left: 20px;
-
-            border: 2px solid #ffc400;
-
-            z-index: -1;
-        }
-
-
-        .christian-camp-image img {
-            display: block;
-
-            width: 100%;
-
-            max-width: 520px;
-
-            height: auto;
-
-            max-height: none;
-
-            object-fit: contain;
-
-            object-position: center;
-
-            background: #000000;
-
-            box-shadow:
-                0 20px 60px
-                rgba(0, 0, 0, 0.45);
-        }
-
-
-
-        /* ========================================
-           MOBILE
-           ======================================== */
-
         @media (max-width: 900px) {
-
             .about-reel {
                 margin-bottom: 30px;
             }
 
-
             .about-reel .instagram-media {
                 max-width: 540px !important;
             }
-
-
-            .hours-notification a {
-                font-size: 12px;
-
-                min-height: 40px;
-            }
-
-
-            .christian-camp-section {
-                padding: 60px 20px;
-            }
-
-
-            .christian-camp-container {
-                grid-template-columns: 1fr;
-
-                gap: 45px;
-            }
-
-
-            .christian-camp-content {
-                text-align: center;
-            }
-
-
-            .christian-camp-label {
-                justify-content: center;
-            }
-
-
-            .christian-camp-description {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-
-            .camp-details {
-                width: fit-content;
-
-                margin-left: auto;
-                margin-right: auto;
-
-                text-align: left;
-            }
-
-
-            .christian-camp-actions {
-                justify-content: center;
-            }
-
-
-            .christian-camp-image {
-                max-width: 600px;
-
-                margin: 0 auto;
-            }
-
-
-            .christian-camp-image img {
-                width: 100%;
-
-                height: auto;
-
-                max-width: 520px;
-
-                max-height: none;
-
-                object-fit: contain;
-            }
-
         }
-
-
-
-        @media (max-width: 500px) {
-
-            .christian-camp-section {
-                padding: 50px 16px;
-            }
-
-
-            .christian-camp-container {
-                gap: 35px;
-            }
-
-
-            .christian-camp-label {
-                font-size: 11px;
-
-                letter-spacing: 1.3px;
-            }
-
-
-            .christian-camp-section h2 {
-                font-size: 43px;
-            }
-
-
-            .christian-camp-description {
-                font-size: 14px;
-
-                line-height: 1.7;
-            }
-
-
-            .camp-detail {
-                font-size: 13px;
-            }
-
-
-            .christian-camp-book {
-                width: 100%;
-
-                max-width: 320px;
-            }
-
-
-            .christian-camp-image {
-                width: 100%;
-            }
-
-
-            .christian-camp-image img {
-                width: 100%;
-
-                height: auto;
-
-                max-width: 100%;
-
-                max-height: none;
-
-                object-fit: contain;
-            }
-
-
-            .christian-camp-image::before {
-                display: none;
-            }
-
-        }
-
     </style>
-
 </head>
-
 
 <body>
 
-
-    <!-- ========================================
-         NAVIGATION
-         ======================================== -->
-
+    <!-- NAVIGATION -->
     <header class="navbar">
-
         <div class="nav-container">
-
-            <a
-                href="index.html"
-                class="logo"
-            >
+            <a href="index.html" class="logo">
                 SPORTS <span>LAB</span>
             </a>
 
-
-            <nav
-                class="nav-links"
-                id="navLinks"
-            >
-
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="booking/">
-                    Book a Cage
-                </a>
-
-                <a href="pricing/">
-                    Pricing
-                </a>
-
-                <a href="soon/">
-                    Lessons
-                </a>
-
-                <a href="gallery/">
-                    Gallery
-                </a>
-
-                <a href="contact/">
-                    Contact
-                </a>
-
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="booking/">Book a Cage</a>
+                <a href="pricing/">Pricing</a>
+                <a href="soon/">Lessons</a>
+                <a href="gallery/">Gallery</a>
+                <a href="contact/">Contact</a>
             </nav>
 
-
-            <a
-                href="booking/"
-                class="nav-button"
-            >
+            <a href="booking/" class="nav-button">
                 BOOK NOW
             </a>
-
 
             <button
                 class="menu-toggle"
@@ -745,294 +99,85 @@
                 aria-label="Open navigation menu"
                 aria-expanded="false"
             >
-
                 <span></span>
                 <span></span>
                 <span></span>
-
             </button>
-
         </div>
-
     </header>
-
-
-
-    <!-- ========================================
-         NEW HOURS NOTIFICATION
-         ======================================== -->
-
-    <div class="hours-notification">
-
-        <a href="#hours">
-
-            <span class="notification-dot"></span>
-
-            NEW HOURS AVAILABLE
-
-            <span class="notification-arrow">
-                ↓
-            </span>
-
-        </a>
-
-    </div>
-
-
-
-    <!-- ========================================
-         MAIN
-         ======================================== -->
 
     <main>
 
-
-
-        <!-- ========================================
-             HERO
-             ======================================== -->
-
+        <!-- HERO -->
         <section class="hero">
-
             <div class="hero-overlay"></div>
 
-
             <div class="hero-content">
-
                 <p class="hero-small">
                     STEP UP TO THE PLATE
                 </p>
-
 
                 <h1>
                     TRAIN HARD.<br>
                     <span>HIT HARDER.</span>
                 </h1>
 
-
                 <p class="hero-description">
                     Professional batting cages built for players
                     who want to take their game to the next level.
                 </p>
 
-
                 <div class="hero-buttons">
-
-                    <a
-                        href="booking/"
-                        class="btn btn-primary"
-                    >
+                    <a href="booking/" class="btn btn-primary">
                         BOOK A CAGE
                     </a>
 
-
-                    <a
-                        href="#about"
-                        class="btn btn-secondary"
-                    >
+                    <a href="#about" class="btn btn-secondary">
                         LEARN MORE
                     </a>
-
                 </div>
-
             </div>
-
 
             <div class="scroll-indicator">
-
-                <span>
-                    SCROLL TO EXPLORE
-                </span>
-
+                <span>SCROLL TO EXPLORE</span>
                 <div class="scroll-line"></div>
-
             </div>
-
         </section>
 
-
-
-        <!-- ========================================
-             QUICK STATS
-             ======================================== -->
-
+        <!-- QUICK STATS -->
         <section class="stats">
-
-
             <div class="stat">
-
-                <strong>
-                    6
-                </strong>
-
-                <span>
-                    Batting Cages
-                </span>
-
+                <strong>6</strong>
+                <span>Batting Cages</span>
             </div>
 
-
             <div class="stat">
-
-                <strong>
-                    6
-                </strong>
-
-                <span>
-                    Days a Week
-                </span>
-
+                <strong>6</strong>
+                <span>Days a Week</span>
             </div>
 
-
             <div class="stat">
-
-                <strong>
-                    100%
-                </strong>
-
-                <span>
-                    Focused on Your Game
-                </span>
-
+                <strong>100%</strong>
+                <span>Focused on Your Game</span>
             </div>
 
-
             <div class="stat">
-
-                <strong>
-                    ALL
-                </strong>
-
-                <span>
-                    Skill Levels
-                </span>
-
+                <strong>ALL</strong>
+                <span>Skill Levels</span>
             </div>
-
-
         </section>
 
-
-
-        <!-- ========================================
-             CHRISTIAN LITTLE CAMP
-             ======================================== -->
-
-        <section
-            class="christian-camp-section"
-            id="christian-little-camp"
-        >
-
-            <div class="christian-camp-container">
-
-
-                <!-- CAMP INFORMATION -->
-
-                <div class="christian-camp-content">
-
-                    <p class="christian-camp-label">
-                        NEW AT SPORTS LAB
-                    </p>
-
-
-                    <h2>
-                        CHRISTIAN LITTLE<br>
-                        <span>PITCHING CAMP.</span>
-                    </h2>
-
-
-                    <p class="christian-camp-description">
-                        Sports Lab is excited to welcome Christian Little
-                        for a special pitching camp. Train, learn, and
-                        improve your game with a professional pitcher
-                        from the Seattle Mariners organization.
-                    </p>
-
-
-                    <div class="camp-details">
-
-                        <div class="camp-detail">
-                            <i class="fa-solid fa-calendar"></i>
-                            October 8th – 9th
-                        </div>
-
-                        <div class="camp-detail">
-                            <i class="fa-solid fa-baseball"></i>
-                            Ages 8 – 18
-                        </div>
-
-                        <div class="camp-detail">
-                            <i class="fa-solid fa-location-dot"></i>
-                            Sports Lab — Casa Grande, Arizona
-                        </div>
-
-                        <div class="camp-detail">
-                            <i class="fa-solid fa-tag"></i>
-                            $150 per player
-                        </div>
-
-                    </div>
-
-
-                    <div class="christian-camp-actions">
-
-                        <a
-                            href="https://book.runswiftapp.com/facilities/sports-lab/camps?campId=17898"
-                            class="christian-camp-book"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            BOOK THE CAMP
-
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- FULL CAMP FLYER -->
-
-                <div class="christian-camp-image">
-
-                    <img
-                        src="camp.png"
-                        alt="Christian Little Pitching Camp at Sports Lab"
-                    >
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ========================================
-             ABOUT
-             ======================================== -->
-
-        <section
-            class="about section"
-            id="about"
-        >
-
+        <!-- ABOUT -->
+        <section class="about section" id="about">
             <div class="section-container">
 
-
                 <div class="about-reel">
-
                     <blockquote
                         class="instagram-media"
                         data-instgrm-permalink="https://www.instagram.com/reel/Ddj-R8BSYJc/?utm_source=ig_embed&amp;utm_campaign=loading"
                         data-instgrm-version="14"
                         style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:1px; max-width:540px; min-width:326px; padding:0; width:calc(100% - 2px);"
                     >
-
                         <a
                             href="https://www.instagram.com/reel/Ddj-R8BSYJc/?utm_source=ig_embed&amp;utm_campaign=loading"
                             target="_blank"
@@ -1040,25 +185,18 @@
                         >
                             View this post on Instagram
                         </a>
-
                     </blockquote>
-
                 </div>
 
-
-
                 <div class="about-content">
-
                     <p class="section-label">
                         ABOUT SPORTS LAB
                     </p>
-
 
                     <h2>
                         YOUR GAME<br>
                         <span>STARTS HERE.</span>
                     </h2>
-
 
                     <p>
                         Whether you're just picking up a bat or preparing
@@ -1066,244 +204,133 @@
                         the space and tools you need to improve.
                     </p>
 
-
                     <p>
                         Get quality repetitions, work on your swing,
                         practice your timing, and have fun while you're
                         doing it.
                     </p>
 
-
-                    <a
-                        href="booking/"
-                        class="text-button"
-                    >
+                    <a href="booking/" class="text-button">
                         RESERVE YOUR CAGE →
                     </a>
-
                 </div>
 
-
             </div>
-
         </section>
 
-
-
-        <!-- ========================================
-             SERVICES
-             ======================================== -->
-
+        <!-- SERVICES -->
         <section class="services section">
 
-
             <div class="section-heading">
-
                 <p class="section-label">
                     WHAT WE OFFER
                 </p>
 
-
-                <h2>
-                    TRAIN YOUR WAY
-                </h2>
-
+                <h2>TRAIN YOUR WAY</h2>
 
                 <p>
                     Everything you need to become a better player.
                 </p>
-
             </div>
-
-
 
             <div class="service-grid">
 
-
                 <!-- SERVICE 01 -->
-
                 <div class="service-card">
+                    <div class="service-number">01</div>
+                    <div class="service-icon">⚾</div>
 
-                    <div class="service-number">
-                        01
-                    </div>
-
-
-                    <div class="service-icon">
-                        ⚾
-                    </div>
-
-
-                    <h3>
-                        BATTING CAGES
-                    </h3>
-
+                    <h3>BATTING CAGES</h3>
 
                     <p>
                         Get quality reps in our batting cages
                         and work on your swing at your own pace.
                     </p>
 
-
                     <a href="booking/">
                         BOOK A CAGE →
                     </a>
-
                 </div>
 
-
-
                 <!-- SERVICE 02 -->
-
                 <div class="service-card">
+                    <div class="service-number">02</div>
+                    <div class="service-icon">🎯</div>
 
-                    <div class="service-number">
-                        02
-                    </div>
-
-
-                    <div class="service-icon">
-                        🎯
-                    </div>
-
-
-                    <h3>
-                        PRIVATE LESSONS
-                    </h3>
-
+                    <h3>PRIVATE LESSONS</h3>
 
                     <p>
                         Work one-on-one with experienced coaches
                         to improve your skills and confidence.
                     </p>
 
-
                     <a href="soon/">
                         VIEW LESSONS →
                     </a>
-
                 </div>
 
-
-
                 <!-- SERVICE 03 -->
-
                 <div class="service-card">
+                    <div class="service-number">03</div>
+                    <div class="service-icon">🔥</div>
 
-                    <div class="service-number">
-                        03
-                    </div>
-
-
-                    <div class="service-icon">
-                        🔥
-                    </div>
-
-
-                    <h3>
-                        MEMBERSHIPS
-                    </h3>
-
+                    <h3>MEMBERSHIPS</h3>
 
                     <p>
                         Train more and save more with membership
                         options designed for dedicated players.
                     </p>
 
-
                     <a href="pricing/">
                         VIEW PRICING →
                     </a>
-
                 </div>
 
-
             </div>
-
         </section>
 
-
-
-        <!-- ========================================
-             CTA
-             ======================================== -->
-
+        <!-- CALL TO ACTION -->
         <section class="cta">
-
             <div class="cta-content">
-
                 <p class="section-label">
                     READY TO GET STARTED?
                 </p>
 
-
-                <h2>
-                    GET IN THE CAGE.
-                </h2>
-
+                <h2>GET IN THE CAGE.</h2>
 
                 <p>
                     Stop waiting. Start swinging.
                 </p>
 
-
-                <a
-                    href="booking/"
-                    class="btn btn-primary"
-                >
+                <a href="booking/" class="btn btn-primary">
                     BOOK YOUR CAGE
                 </a>
-
             </div>
-
         </section>
-
 
     </main>
 
-
-
-    <!-- ========================================
-         FOOTER
-         ======================================== -->
-
+    <!-- FOOTER -->
     <footer class="footer">
-
         <div class="footer-container">
 
-
-
             <!-- BRAND -->
-
             <div class="footer-brand">
-
-                <a
-                    href="./"
-                    class="logo"
-                >
+                <a href="./" class="logo">
                     SPORTS <span>LAB</span>
                 </a>
 
-
-                <p>
-                    Train hard. Hit harder.
-                </p>
-
+                <p>Train hard. Hit harder.</p>
 
                 <div class="social-links">
-
-
                     <a
                         href="https://www.instagram.com/sportslab_az/"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Instagram"
                     >
-
                         <i class="fa-brands fa-instagram"></i>
-
                     </a>
-
 
                     <a
                         href="https://www.facebook.com/share/1HDGzncBon/?mibextid=wwXIfr"
@@ -1311,64 +338,25 @@
                         rel="noopener noreferrer"
                         aria-label="Facebook"
                     >
-
                         <i class="fa-brands fa-facebook"></i>
-
                     </a>
-
-
                 </div>
-
             </div>
-
-
 
             <!-- QUICK LINKS -->
-
             <div class="footer-links">
+                <h4>QUICK LINKS</h4>
 
-                <h4>
-                    QUICK LINKS
-                </h4>
-
-
-                <a href="./">
-                    Home
-                </a>
-
-
-                <a href="pricing/">
-                    Pricing
-                </a>
-
-
-                <a href="soon/">
-                    Lessons
-                </a>
-
-
-                <a href="gallery/">
-                    Gallery
-                </a>
-
-
-                <a href="contact/">
-                    Contact
-                </a>
-
-
+                <a href="./">Home</a>
+                <a href="pricing/">Pricing</a>
+                <a href="soon/">Lessons</a>
+                <a href="gallery/">Gallery</a>
+                <a href="contact/">Contact</a>
             </div>
 
-
-
             <!-- CONTACT -->
-
             <div class="footer-contact">
-
-                <h4>
-                    FIND US
-                </h4>
-
+                <h4>FIND US</h4>
 
                 <a
                     href="https://www.google.com/maps?q=1375+East+Florence+Boulevard,+Casa+Grande,+AZ+85122"
@@ -1379,207 +367,94 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;Casa Grande, AZ 85122
                 </a>
 
-
                 <p>
-
                     📞
-
                     <a href="tel:5207012963">
                         (520) 701-2963
                     </a>
-
                 </p>
-
 
                 <a href="mailto:joe@sportslabaz.com">
                     ✉️ joe@sportslabaz.com
                 </a>
 
-
                 <a href="mailto:brian@sportslabaz.com">
                     ✉️ brian@sportslabaz.com
                 </a>
-
-
             </div>
 
-
-
-            <!-- HOURS -->
-
-            <div
-                class="footer-hours"
-                id="hours"
-            >
-
-                <h4>
-                    REGULAR HOURS:
-                </h4>
-
+            <!-- REGULAR HOURS -->
+            <div class="footer-hours" id="hours">
+                <h4>REGULAR HOURS:</h4>
 
                 <ul class="footer-hours-list">
-
-
                     <li>
                         <span>Monday:</span>
-                        3PM - 9PM
+                        10AM - 9PM
                     </li>
-
-
                     <li>
                         <span>Tuesday:</span>
-                        3PM - 9PM
+                        10AM - 9PM
                     </li>
-
-
                     <li>
                         <span>Wednesday:</span>
-                        3PM - 9PM
+                        10AM - 9PM
                     </li>
-
-
                     <li>
                         <span>Thursday:</span>
-                        3PM - 9PM
+                        10AM - 9PM
                     </li>
-
-
                     <li>
                         <span>Friday:</span>
-                        3PM - 9PM
+                        10AM - 9PM
                     </li>
-
-
                     <li>
                         <span>Saturday:</span>
-                        10AM - 8PM
+                        10AM - 9PM
                     </li>
-
-
                     <li>
                         <span>Sunday:</span>
                         Closed
                     </li>
-
-
                 </ul>
-
-
-
-                <!-- FALL HOURS -->
-
-                <div class="fall-hours">
-
-                    <h4>
-                        FALL HOURS:
-                    </h4>
-
-
-                    <p>
-                        September 28 – October 9
-                    </p>
-
-
-                    <ul class="footer-hours-list">
-
-
-                        <li>
-                            <span>Monday - Friday:</span>
-                            10AM - 9PM
-                        </li>
-
-
-                        <li>
-                            <span>Saturday:</span>
-                            10AM - 9PM
-                        </li>
-
-
-                    </ul>
-
-                </div>
-
-
             </div>
 
-
-
             <!-- BOOKING -->
-
             <div class="footer-book">
-
-                <h4>
-                    READY TO TRAIN?
-                </h4>
-
+                <h4>READY TO TRAIN?</h4>
 
                 <p>
                     Reserve your cage and
                     get to work.
                 </p>
 
-
-                <a
-                    href="booking/"
-                    class="footer-book-button"
-                >
+                <a href="booking/" class="footer-book-button">
                     BOOK A CAGE →
                 </a>
-
-
             </div>
-
 
         </div>
 
-
-
-        <!-- ========================================
-             BOTTOM BAR
-             ======================================== -->
-
+        <!-- BOTTOM BAR -->
         <div class="footer-bottom">
-
             <p>
                 © 2026 Sports Lab. All rights reserved.
             </p>
 
-
             <div class="footer-bottom-links">
-
-                <a href="./">
-                    Home
-                </a>
-
-
-                <span>
-                    •
-                </span>
-
-
-                <a href="contact/">
-                    Contact
-                </a>
-
-
+                <a href="./">Home</a>
+                <span>•</span>
+                <a href="contact/">Contact</a>
             </div>
-
         </div>
-
-
     </footer>
-
-
 
     <script
         async
         src="//www.instagram.com/embed.js"
     ></script>
 
-
     <script src="js/main.js"></script>
 
-
 </body>
-
 </html>
